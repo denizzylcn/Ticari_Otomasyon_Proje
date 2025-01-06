@@ -12,16 +12,20 @@ namespace Ticari_Otomasyon_Proje.entity
     using System;
     using System.Collections.Generic;
     
-    public partial class TBLCARIHAREKET
+    public partial class TBLMUSTERIHAREKET
     {
         public int SATISID { get; set; }
         public Nullable<int> URUN { get; set; }
-        public Nullable<int> CARI { get; set; }
+        public int MUSTERIID { get; set; }
         public Nullable<int> PERSONEL { get; set; }
         public Nullable<System.DateTime> TARIH { get; set; }
         public Nullable<short> ADET { get; set; }
         public Nullable<decimal> BIRIMFIYAT { get; set; }
         public Nullable<decimal> TOPLAM { get; set; }
         public string ACIKLAMA { get; set; }
+    
+        public virtual TBLMUSTERI TBLMUSTERI { get; set; }
+        public virtual TBLPERSONEL TBLPERSONEL { get; set; }
+        public virtual TBLURUN TBLURUN { get; set; }
     }
 }

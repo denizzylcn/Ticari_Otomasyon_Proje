@@ -12,28 +12,25 @@ namespace Ticari_Otomasyon_Proje.entity
     using System;
     using System.Collections.Generic;
     
-    public partial class TBLURUN
+    public partial class TBLMUSTERI
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TBLURUN()
+        public TBLMUSTERI()
         {
             this.TBLMUSTERIHAREKET = new HashSet<TBLMUSTERIHAREKET>();
-            this.TBLSIPARISLER = new HashSet<TBLSIPARISLER>();
         }
     
-        public int URUNID { get; set; }
-        public string URUNAD { get; set; }
-        public Nullable<decimal> ALISFIYAT { get; set; }
-        public Nullable<decimal> SATISFIYAT { get; set; }
-        public Nullable<short> STOK { get; set; }
-        public Nullable<bool> KRITIKSEVIYE { get; set; }
-        public Nullable<int> KATEGORI { get; set; }
+        public int MUSTERIID { get; set; }
+        public string AD { get; set; }
+        public string SOYAD { get; set; }
+        public string IL { get; set; }
+        public string ILCE { get; set; }
+        public string TELEFON { get; set; }
+        public string MAIL { get; set; }
+        public string TC { get; set; }
+        public string ADRES { get; set; }
     
-        public virtual TBLKATEGORI TBLKATEGORI { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBLMUSTERIHAREKET> TBLMUSTERIHAREKET { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TBLSIPARISLER> TBLSIPARISLER { get; set; }
-        public virtual TBLFIRMAHAREKET TBLFIRMAHAREKET { get; set; }
     }
 }

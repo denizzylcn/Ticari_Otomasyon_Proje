@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DbTicariOtomasyonModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DbTicariOtomasyonModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -14,22 +14,6 @@
           <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLCARIHAREKET' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="TBLCARIHAREKET">
-          <Key>
-            <PropertyRef Name="SATISID" />
-          </Key>
-          <Property Name="SATISID" Type="int" Nullable="false" />
-          <Property Name="URUN" Type="int" />
-          <Property Name="CARI" Type="int" />
-          <Property Name="PERSONEL" Type="int" />
-          <Property Name="TARIH" Type="datetime" />
-          <Property Name="ADET" Type="smallint" />
-          <Property Name="BIRIMFIYAT" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="TOPLAM" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="ACIKLAMA" Type="varchar" MaxLength="1000" />
         </EntityType>
         <EntityType Name="TBLDEPARTMAN">
           <Key>
@@ -70,8 +54,6 @@ warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLFIRMAHAREKET' does not ha
           <Property Name="TOPLAM" Type="decimal" Precision="18" Scale="2" />
           <Property Name="ACIKLAMA" Type="varchar" MaxLength="1000" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLGIDERLER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="TBLGIDERLER">
           <Key>
             <PropertyRef Name="GIDERID" />
@@ -83,25 +65,28 @@ warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLGIDERLER' does not have a
         </EntityType>
         <EntityType Name="TBLILCELER">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
-          <Property Name="ILCE" Type="varchar" MaxLength="30" />
-          <Property Name="SEHIR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="ilce" Type="nvarchar" MaxLength="255" />
+          <Property Name="sehir" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
         <EntityType Name="TBLILLER">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="SEHIR" Type="varchar" MaxLength="20" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sehir" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="TBLKASA">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="GIDERID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="GIDERID" Type="int" Nullable="false" />
           <Property Name="TUTAR" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="TUR" Type="varchar" MaxLength="5" />
+          <Property Name="ACIKLAMA" Type="varchar" MaxLength="200" />
+          <Property Name="TARIH" Type="date" />
         </EntityType>
         <EntityType Name="TBLKATEGORI">
           <Key>
@@ -110,11 +95,39 @@ warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLGIDERLER' does not have a
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="KATEGORIAD" Type="varchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="TBLMUSTERI">
+          <Key>
+            <PropertyRef Name="MUSTERIID" />
+          </Key>
+          <Property Name="MUSTERIID" Type="int" Nullable="false" />
+          <Property Name="AD" Type="varchar" MaxLength="20" />
+          <Property Name="SOYAD" Type="varchar" MaxLength="20" />
+          <Property Name="IL" Type="varchar" MaxLength="20" />
+          <Property Name="ILCE" Type="varchar" MaxLength="30" />
+          <Property Name="TELEFON" Type="varchar" MaxLength="20" />
+          <Property Name="MAIL" Type="varchar" MaxLength="20" />
+          <Property Name="TC" Type="char" MaxLength="11" />
+          <Property Name="ADRES" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TBLMUSTERIHAREKET">
+          <Key>
+            <PropertyRef Name="SATISID" />
+          </Key>
+          <Property Name="SATISID" Type="int" Nullable="false" />
+          <Property Name="URUN" Type="int" />
+          <Property Name="MUSTERIID" Type="int" Nullable="false" />
+          <Property Name="PERSONEL" Type="int" />
+          <Property Name="TARIH" Type="datetime" />
+          <Property Name="ADET" Type="smallint" />
+          <Property Name="BIRIMFIYAT" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="TOPLAM" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ACIKLAMA" Type="varchar" MaxLength="1000" />
+        </EntityType>
         <EntityType Name="TBLNOTLAR">
           <Key>
             <PropertyRef Name="NOTID" />
           </Key>
-          <Property Name="NOTID" Type="int" Nullable="false" />
+          <Property Name="NOTID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="BASLIK" Type="varchar" MaxLength="100" />
           <Property Name="ICERIK" Type="varchar(max)" />
           <Property Name="TARIH" Type="date" />
@@ -129,6 +142,16 @@ warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLGIDERLER' does not have a
           <Property Name="PERSONELAD" Type="varchar" MaxLength="20" />
           <Property Name="PERSONELSOYAD" Type="varchar" MaxLength="20" />
           <Property Name="PERSONELDEPARTMAN" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="TBLSIPARISLER">
+          <Key>
+            <PropertyRef Name="SıparısID" />
+          </Key>
+          <Property Name="SıparısID" Type="int" Nullable="false" />
+          <Property Name="UrunID" Type="int" />
+          <Property Name="Miktar" Type="smallint" />
+          <Property Name="Tarih" Type="datetime" />
+          <Property Name="ToplamTutar" Type="decimal" Precision="10" Scale="2" />
         </EntityType>
         <EntityType Name="TBLURUN">
           <Key>
@@ -178,6 +201,42 @@ warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLGIDERLER' does not have a
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_TBLMUSTERIHAREKET_TBLMUSTERI">
+          <End Role="TBLMUSTERI" Type="Self.TBLMUSTERI" Multiplicity="1" />
+          <End Role="TBLMUSTERIHAREKET" Type="Self.TBLMUSTERIHAREKET" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLMUSTERI">
+              <PropertyRef Name="MUSTERIID" />
+            </Principal>
+            <Dependent Role="TBLMUSTERIHAREKET">
+              <PropertyRef Name="MUSTERIID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLMUSTERIHAREKET_TBLPERSONEL">
+          <End Role="TBLPERSONEL" Type="Self.TBLPERSONEL" Multiplicity="0..1" />
+          <End Role="TBLMUSTERIHAREKET" Type="Self.TBLMUSTERIHAREKET" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLPERSONEL">
+              <PropertyRef Name="PERSONELID" />
+            </Principal>
+            <Dependent Role="TBLMUSTERIHAREKET">
+              <PropertyRef Name="PERSONEL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLMUSTERIHAREKET_TBLURUN">
+          <End Role="TBLURUN" Type="Self.TBLURUN" Multiplicity="0..1" />
+          <End Role="TBLMUSTERIHAREKET" Type="Self.TBLMUSTERIHAREKET" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLURUN">
+              <PropertyRef Name="URUNID" />
+            </Principal>
+            <Dependent Role="TBLMUSTERIHAREKET">
+              <PropertyRef Name="URUN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_TBLPERSONEL_TBLDEPARTMAN">
           <End Role="TBLDEPARTMAN" Type="Self.TBLDEPARTMAN" Multiplicity="0..1" />
           <End Role="TBLPERSONEL" Type="Self.TBLPERSONEL" Multiplicity="*" />
@@ -187,6 +246,18 @@ warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLGIDERLER' does not have a
             </Principal>
             <Dependent Role="TBLPERSONEL">
               <PropertyRef Name="PERSONELDEPARTMAN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLSIPARISLER_TBLURUN">
+          <End Role="TBLURUN" Type="Self.TBLURUN" Multiplicity="0..1" />
+          <End Role="TBLSIPARISLER" Type="Self.TBLSIPARISLER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLURUN">
+              <PropertyRef Name="URUNID" />
+            </Principal>
+            <Dependent Role="TBLSIPARISLER">
+              <PropertyRef Name="UrunID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -202,30 +273,52 @@ warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLGIDERLER' does not have a
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="DbTicariOtomasyonModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLDEPARTMAN" EntityType="Self.TBLDEPARTMAN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLFIRMA" EntityType="Self.TBLFIRMA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLGIDERLER" EntityType="Self.TBLGIDERLER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLILCELER" EntityType="Self.TBLILCELER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLILLER" EntityType="Self.TBLILLER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLKASA" EntityType="Self.TBLKASA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLKATEGORI" EntityType="Self.TBLKATEGORI" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLMUSTERI" EntityType="Self.TBLMUSTERI" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLMUSTERIHAREKET" EntityType="Self.TBLMUSTERIHAREKET" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLNOTLAR" EntityType="Self.TBLNOTLAR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLPERSONEL" EntityType="Self.TBLPERSONEL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLSIPARISLER" EntityType="Self.TBLSIPARISLER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLURUN" EntityType="Self.TBLURUN" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TBLCARIHAREKET" EntityType="Self.TBLCARIHAREKET" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [TBLCARIHAREKET].[SATISID] AS [SATISID], 
-    [TBLCARIHAREKET].[URUN] AS [URUN], 
-    [TBLCARIHAREKET].[CARI] AS [CARI], 
-    [TBLCARIHAREKET].[PERSONEL] AS [PERSONEL], 
-    [TBLCARIHAREKET].[TARIH] AS [TARIH], 
-    [TBLCARIHAREKET].[ADET] AS [ADET], 
-    [TBLCARIHAREKET].[BIRIMFIYAT] AS [BIRIMFIYAT], 
-    [TBLCARIHAREKET].[TOPLAM] AS [TOPLAM], 
-    [TBLCARIHAREKET].[ACIKLAMA] AS [ACIKLAMA]
-    FROM [dbo].[TBLCARIHAREKET] AS [TBLCARIHAREKET]</DefiningQuery>
-          </EntitySet>
           <EntitySet Name="TBLFIRMAHAREKET" EntityType="Self.TBLFIRMAHAREKET" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [TBLFIRMAHAREKET].[SATISID] AS [SATISID], 
@@ -239,14 +332,6 @@ warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLGIDERLER' does not have a
     [TBLFIRMAHAREKET].[ACIKLAMA] AS [ACIKLAMA]
     FROM [dbo].[TBLFIRMAHAREKET] AS [TBLFIRMAHAREKET]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="TBLGIDERLER" EntityType="Self.TBLGIDERLER" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [TBLGIDERLER].[GIDERID] AS [GIDERID], 
-    [TBLGIDERLER].[ACIKLAMA] AS [ACIKLAMA], 
-    [TBLGIDERLER].[TARIH] AS [TARIH], 
-    [TBLGIDERLER].[TUTAR] AS [TUTAR]
-    FROM [dbo].[TBLGIDERLER] AS [TBLGIDERLER]</DefiningQuery>
-          </EntitySet>
           <AssociationSet Name="FK_TBLFIRMAHAREKET_TBLFIRMA" Association="Self.FK_TBLFIRMAHAREKET_TBLFIRMA">
             <End Role="TBLFIRMA" EntitySet="TBLFIRMA" />
             <End Role="TBLFIRMAHAREKET" EntitySet="TBLFIRMAHAREKET" />
@@ -259,17 +344,32 @@ warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLGIDERLER' does not have a
             <End Role="TBLURUN" EntitySet="TBLURUN" />
             <End Role="TBLFIRMAHAREKET" EntitySet="TBLFIRMAHAREKET" />
           </AssociationSet>
+          <AssociationSet Name="FK_TBLMUSTERIHAREKET_TBLMUSTERI" Association="Self.FK_TBLMUSTERIHAREKET_TBLMUSTERI">
+            <End Role="TBLMUSTERI" EntitySet="TBLMUSTERI" />
+            <End Role="TBLMUSTERIHAREKET" EntitySet="TBLMUSTERIHAREKET" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLMUSTERIHAREKET_TBLPERSONEL" Association="Self.FK_TBLMUSTERIHAREKET_TBLPERSONEL">
+            <End Role="TBLPERSONEL" EntitySet="TBLPERSONEL" />
+            <End Role="TBLMUSTERIHAREKET" EntitySet="TBLMUSTERIHAREKET" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLMUSTERIHAREKET_TBLURUN" Association="Self.FK_TBLMUSTERIHAREKET_TBLURUN">
+            <End Role="TBLURUN" EntitySet="TBLURUN" />
+            <End Role="TBLMUSTERIHAREKET" EntitySet="TBLMUSTERIHAREKET" />
+          </AssociationSet>
           <AssociationSet Name="FK_TBLPERSONEL_TBLDEPARTMAN" Association="Self.FK_TBLPERSONEL_TBLDEPARTMAN">
             <End Role="TBLDEPARTMAN" EntitySet="TBLDEPARTMAN" />
             <End Role="TBLPERSONEL" EntitySet="TBLPERSONEL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLSIPARISLER_TBLURUN" Association="Self.FK_TBLSIPARISLER_TBLURUN">
+            <End Role="TBLURUN" EntitySet="TBLURUN" />
+            <End Role="TBLSIPARISLER" EntitySet="TBLSIPARISLER" />
           </AssociationSet>
           <AssociationSet Name="FK_TBLURUN_TBLKATEGORI" Association="Self.FK_TBLURUN_TBLKATEGORI">
             <End Role="TBLKATEGORI" EntitySet="TBLKATEGORI" />
             <End Role="TBLURUN" EntitySet="TBLURUN" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DbTicariOtomasyonModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -310,25 +410,30 @@ warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLGIDERLER' does not have a
         </EntityType>
         <EntityType Name="TBLILCELER">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
-          <Property Name="ILCE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="SEHIR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="ilce" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sehir" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="TBLILLER">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="SEHIR" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sehir" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="TBLKASA">
           <Key>
             <PropertyRef Name="ID" />
+            <PropertyRef Name="GIDERID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" />
           <Property Name="TUTAR" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="TUR" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="ACIKLAMA" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="TARIH" Type="DateTime" Precision="0" />
+          <Property Name="GIDERID" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="TBLKATEGORI">
           <Key>
@@ -337,6 +442,38 @@ warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLGIDERLER' does not have a
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="KATEGORIAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="TBLURUN" Relationship="Self.FK_TBLURUN_TBLKATEGORI" FromRole="TBLKATEGORI" ToRole="TBLURUN" />
+        </EntityType>
+        <EntityType Name="TBLMUSTERI">
+          <Key>
+            <PropertyRef Name="MUSTERIID" />
+          </Key>
+          <Property Name="MUSTERIID" Type="Int32" Nullable="false" />
+          <Property Name="AD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SOYAD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="IL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ILCE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="TELEFON" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MAIL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TC" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="ADRES" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TBLMUSTERIHAREKET" Relationship="Self.FK_TBLMUSTERIHAREKET_TBLMUSTERI" FromRole="TBLMUSTERI" ToRole="TBLMUSTERIHAREKET" />
+        </EntityType>
+        <EntityType Name="TBLMUSTERIHAREKET">
+          <Key>
+            <PropertyRef Name="SATISID" />
+          </Key>
+          <Property Name="SATISID" Type="Int32" Nullable="false" />
+          <Property Name="URUN" Type="Int32" />
+          <Property Name="MUSTERIID" Type="Int32" Nullable="false" />
+          <Property Name="PERSONEL" Type="Int32" />
+          <Property Name="TARIH" Type="DateTime" Precision="3" />
+          <Property Name="ADET" Type="Int16" />
+          <Property Name="BIRIMFIYAT" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="TOPLAM" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ACIKLAMA" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TBLMUSTERI" Relationship="Self.FK_TBLMUSTERIHAREKET_TBLMUSTERI" FromRole="TBLMUSTERIHAREKET" ToRole="TBLMUSTERI" />
+          <NavigationProperty Name="TBLPERSONEL" Relationship="Self.FK_TBLMUSTERIHAREKET_TBLPERSONEL" FromRole="TBLMUSTERIHAREKET" ToRole="TBLPERSONEL" />
+          <NavigationProperty Name="TBLURUN" Relationship="Self.FK_TBLMUSTERIHAREKET_TBLURUN" FromRole="TBLMUSTERIHAREKET" ToRole="TBLURUN" />
         </EntityType>
         <EntityType Name="TBLNOTLAR">
           <Key>
@@ -358,7 +495,19 @@ warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLGIDERLER' does not have a
           <Property Name="PERSONELSOYAD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="PERSONELDEPARTMAN" Type="Byte" />
           <NavigationProperty Name="TBLDEPARTMAN" Relationship="Self.FK_TBLPERSONEL_TBLDEPARTMAN" FromRole="TBLPERSONEL" ToRole="TBLDEPARTMAN" />
+          <NavigationProperty Name="TBLMUSTERIHAREKET" Relationship="Self.FK_TBLMUSTERIHAREKET_TBLPERSONEL" FromRole="TBLPERSONEL" ToRole="TBLMUSTERIHAREKET" />
           <NavigationProperty Name="TBLFIRMAHAREKET" Relationship="Self.FK_TBLFIRMAHAREKET_TBLPERSONEL" FromRole="TBLPERSONEL" ToRole="TBLFIRMAHAREKET" />
+        </EntityType>
+        <EntityType Name="TBLSIPARISLER">
+          <Key>
+            <PropertyRef Name="SıparısID" />
+          </Key>
+          <Property Name="SıparısID" Type="Int32" Nullable="false" />
+          <Property Name="UrunID" Type="Int32" />
+          <Property Name="Miktar" Type="Int16" />
+          <Property Name="Tarih" Type="DateTime" Precision="3" />
+          <Property Name="ToplamTutar" Type="Decimal" Precision="10" Scale="2" />
+          <NavigationProperty Name="TBLURUN" Relationship="Self.FK_TBLSIPARISLER_TBLURUN" FromRole="TBLSIPARISLER" ToRole="TBLURUN" />
         </EntityType>
         <EntityType Name="TBLURUN">
           <Key>
@@ -372,21 +521,9 @@ warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLGIDERLER' does not have a
           <Property Name="KRITIKSEVIYE" Type="Boolean" />
           <Property Name="KATEGORI" Type="Int32" />
           <NavigationProperty Name="TBLKATEGORI" Relationship="Self.FK_TBLURUN_TBLKATEGORI" FromRole="TBLURUN" ToRole="TBLKATEGORI" />
+          <NavigationProperty Name="TBLMUSTERIHAREKET" Relationship="Self.FK_TBLMUSTERIHAREKET_TBLURUN" FromRole="TBLURUN" ToRole="TBLMUSTERIHAREKET" />
+          <NavigationProperty Name="TBLSIPARISLER" Relationship="Self.FK_TBLSIPARISLER_TBLURUN" FromRole="TBLURUN" ToRole="TBLSIPARISLER" />
           <NavigationProperty Name="TBLFIRMAHAREKET" Relationship="Self.FK_TBLFIRMAHAREKET_TBLURUN" FromRole="TBLURUN" ToRole="TBLFIRMAHAREKET" />
-        </EntityType>
-        <EntityType Name="TBLCARIHAREKET">
-          <Key>
-            <PropertyRef Name="SATISID" />
-          </Key>
-          <Property Name="SATISID" Type="Int32" Nullable="false" />
-          <Property Name="URUN" Type="Int32" />
-          <Property Name="CARI" Type="Int32" />
-          <Property Name="PERSONEL" Type="Int32" />
-          <Property Name="TARIH" Type="DateTime" Precision="3" />
-          <Property Name="ADET" Type="Int16" />
-          <Property Name="BIRIMFIYAT" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="TOPLAM" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="ACIKLAMA" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="TBLFIRMAHAREKET">
           <Key>
@@ -450,6 +587,42 @@ warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLGIDERLER' does not have a
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_TBLMUSTERIHAREKET_TBLMUSTERI">
+          <End Role="TBLMUSTERI" Type="Self.TBLMUSTERI" Multiplicity="1" />
+          <End Role="TBLMUSTERIHAREKET" Type="Self.TBLMUSTERIHAREKET" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLMUSTERI">
+              <PropertyRef Name="MUSTERIID" />
+            </Principal>
+            <Dependent Role="TBLMUSTERIHAREKET">
+              <PropertyRef Name="MUSTERIID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLMUSTERIHAREKET_TBLPERSONEL">
+          <End Role="TBLPERSONEL" Type="Self.TBLPERSONEL" Multiplicity="0..1" />
+          <End Role="TBLMUSTERIHAREKET" Type="Self.TBLMUSTERIHAREKET" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLPERSONEL">
+              <PropertyRef Name="PERSONELID" />
+            </Principal>
+            <Dependent Role="TBLMUSTERIHAREKET">
+              <PropertyRef Name="PERSONEL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLMUSTERIHAREKET_TBLURUN">
+          <End Role="TBLURUN" Type="Self.TBLURUN" Multiplicity="0..1" />
+          <End Role="TBLMUSTERIHAREKET" Type="Self.TBLMUSTERIHAREKET" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLURUN">
+              <PropertyRef Name="URUNID" />
+            </Principal>
+            <Dependent Role="TBLMUSTERIHAREKET">
+              <PropertyRef Name="URUN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_TBLFIRMAHAREKET_TBLPERSONEL">
           <End Role="TBLPERSONEL" Type="Self.TBLPERSONEL" Multiplicity="0..1" />
           <End Role="TBLFIRMAHAREKET" Type="Self.TBLFIRMAHAREKET" Multiplicity="*" />
@@ -459,6 +632,18 @@ warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLGIDERLER' does not have a
             </Principal>
             <Dependent Role="TBLFIRMAHAREKET">
               <PropertyRef Name="PERSONEL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLSIPARISLER_TBLURUN">
+          <End Role="TBLURUN" Type="Self.TBLURUN" Multiplicity="0..1" />
+          <End Role="TBLSIPARISLER" Type="Self.TBLSIPARISLER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLURUN">
+              <PropertyRef Name="URUNID" />
+            </Principal>
+            <Dependent Role="TBLSIPARISLER">
+              <PropertyRef Name="UrunID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -474,7 +659,7 @@ warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLGIDERLER' does not have a
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DbTicariOtomasyonEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DbTicariOtomasyonEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="TBLDEPARTMAN" EntityType="Self.TBLDEPARTMAN" />
           <EntitySet Name="TBLFIRMA" EntityType="Self.TBLFIRMA" />
@@ -482,10 +667,12 @@ warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLGIDERLER' does not have a
           <EntitySet Name="TBLILLER" EntityType="Self.TBLILLER" />
           <EntitySet Name="TBLKASA" EntityType="Self.TBLKASA" />
           <EntitySet Name="TBLKATEGORI" EntityType="Self.TBLKATEGORI" />
+          <EntitySet Name="TBLMUSTERI" EntityType="Self.TBLMUSTERI" />
+          <EntitySet Name="TBLMUSTERIHAREKET" EntityType="Self.TBLMUSTERIHAREKET" />
           <EntitySet Name="TBLNOTLAR" EntityType="Self.TBLNOTLAR" />
           <EntitySet Name="TBLPERSONEL" EntityType="Self.TBLPERSONEL" />
+          <EntitySet Name="TBLSIPARISLER" EntityType="Self.TBLSIPARISLER" />
           <EntitySet Name="TBLURUN" EntityType="Self.TBLURUN" />
-          <EntitySet Name="TBLCARIHAREKET" EntityType="Self.TBLCARIHAREKET" />
           <EntitySet Name="TBLFIRMAHAREKET" EntityType="Self.TBLFIRMAHAREKET" />
           <EntitySet Name="TBLGIDERLER" EntityType="Self.TBLGIDERLER" />
           <AssociationSet Name="FK_TBLPERSONEL_TBLDEPARTMAN" Association="Self.FK_TBLPERSONEL_TBLDEPARTMAN">
@@ -500,21 +687,78 @@ warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLGIDERLER' does not have a
             <End Role="TBLKATEGORI" EntitySet="TBLKATEGORI" />
             <End Role="TBLURUN" EntitySet="TBLURUN" />
           </AssociationSet>
+          <AssociationSet Name="FK_TBLMUSTERIHAREKET_TBLMUSTERI" Association="Self.FK_TBLMUSTERIHAREKET_TBLMUSTERI">
+            <End Role="TBLMUSTERI" EntitySet="TBLMUSTERI" />
+            <End Role="TBLMUSTERIHAREKET" EntitySet="TBLMUSTERIHAREKET" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLMUSTERIHAREKET_TBLPERSONEL" Association="Self.FK_TBLMUSTERIHAREKET_TBLPERSONEL">
+            <End Role="TBLPERSONEL" EntitySet="TBLPERSONEL" />
+            <End Role="TBLMUSTERIHAREKET" EntitySet="TBLMUSTERIHAREKET" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLMUSTERIHAREKET_TBLURUN" Association="Self.FK_TBLMUSTERIHAREKET_TBLURUN">
+            <End Role="TBLURUN" EntitySet="TBLURUN" />
+            <End Role="TBLMUSTERIHAREKET" EntitySet="TBLMUSTERIHAREKET" />
+          </AssociationSet>
           <AssociationSet Name="FK_TBLFIRMAHAREKET_TBLPERSONEL" Association="Self.FK_TBLFIRMAHAREKET_TBLPERSONEL">
             <End Role="TBLPERSONEL" EntitySet="TBLPERSONEL" />
             <End Role="TBLFIRMAHAREKET" EntitySet="TBLFIRMAHAREKET" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLSIPARISLER_TBLURUN" Association="Self.FK_TBLSIPARISLER_TBLURUN">
+            <End Role="TBLURUN" EntitySet="TBLURUN" />
+            <End Role="TBLSIPARISLER" EntitySet="TBLSIPARISLER" />
           </AssociationSet>
           <AssociationSet Name="FK_TBLFIRMAHAREKET_TBLURUN" Association="Self.FK_TBLFIRMAHAREKET_TBLURUN">
             <End Role="TBLURUN" EntitySet="TBLURUN" />
             <End Role="TBLFIRMAHAREKET" EntitySet="TBLFIRMAHAREKET" />
           </AssociationSet>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(DbTicariOtomasyonModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(DbTicariOtomasyonModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
         </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DbTicariOtomasyonModelStoreContainer" CdmEntityContainer="DbTicariOtomasyonEntities">
+        <EntityContainerMapping StorageEntityContainer="DbTicariOtomasyonModelStoreContainer" CdmEntityContainer="DbTicariOtomasyonEntities3">
           <EntitySetMapping Name="sysdiagrams">
             <EntityTypeMapping TypeName="DbTicariOtomasyonModel.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
@@ -554,25 +798,28 @@ warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLGIDERLER' does not have a
           <EntitySetMapping Name="TBLILCELER">
             <EntityTypeMapping TypeName="DbTicariOtomasyonModel.TBLILCELER">
               <MappingFragment StoreEntitySet="TBLILCELER">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="ILCE" ColumnName="ILCE" />
-                <ScalarProperty Name="SEHIR" ColumnName="SEHIR" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ilce" ColumnName="ilce" />
+                <ScalarProperty Name="sehir" ColumnName="sehir" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TBLILLER">
             <EntityTypeMapping TypeName="DbTicariOtomasyonModel.TBLILLER">
               <MappingFragment StoreEntitySet="TBLILLER">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="SEHIR" ColumnName="SEHIR" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="sehir" ColumnName="sehir" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TBLKASA">
             <EntityTypeMapping TypeName="DbTicariOtomasyonModel.TBLKASA">
               <MappingFragment StoreEntitySet="TBLKASA">
-                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="GIDERID" ColumnName="GIDERID" />
                 <ScalarProperty Name="TUTAR" ColumnName="TUTAR" />
+                <ScalarProperty Name="TUR" ColumnName="TUR" />
+                <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -581,6 +828,36 @@ warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLGIDERLER' does not have a
               <MappingFragment StoreEntitySet="TBLKATEGORI">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="KATEGORIAD" ColumnName="KATEGORIAD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLMUSTERI">
+            <EntityTypeMapping TypeName="DbTicariOtomasyonModel.TBLMUSTERI">
+              <MappingFragment StoreEntitySet="TBLMUSTERI">
+                <ScalarProperty Name="MUSTERIID" ColumnName="MUSTERIID" />
+                <ScalarProperty Name="AD" ColumnName="AD" />
+                <ScalarProperty Name="SOYAD" ColumnName="SOYAD" />
+                <ScalarProperty Name="IL" ColumnName="IL" />
+                <ScalarProperty Name="ILCE" ColumnName="ILCE" />
+                <ScalarProperty Name="TELEFON" ColumnName="TELEFON" />
+                <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+                <ScalarProperty Name="TC" ColumnName="TC" />
+                <ScalarProperty Name="ADRES" ColumnName="ADRES" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLMUSTERIHAREKET">
+            <EntityTypeMapping TypeName="DbTicariOtomasyonModel.TBLMUSTERIHAREKET">
+              <MappingFragment StoreEntitySet="TBLMUSTERIHAREKET">
+                <ScalarProperty Name="SATISID" ColumnName="SATISID" />
+                <ScalarProperty Name="URUN" ColumnName="URUN" />
+                <ScalarProperty Name="MUSTERIID" ColumnName="MUSTERIID" />
+                <ScalarProperty Name="PERSONEL" ColumnName="PERSONEL" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="ADET" ColumnName="ADET" />
+                <ScalarProperty Name="BIRIMFIYAT" ColumnName="BIRIMFIYAT" />
+                <ScalarProperty Name="TOPLAM" ColumnName="TOPLAM" />
+                <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -606,6 +883,17 @@ warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLGIDERLER' does not have a
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="TBLSIPARISLER">
+            <EntityTypeMapping TypeName="DbTicariOtomasyonModel.TBLSIPARISLER">
+              <MappingFragment StoreEntitySet="TBLSIPARISLER">
+                <ScalarProperty Name="SıparısID" ColumnName="SıparısID" />
+                <ScalarProperty Name="UrunID" ColumnName="UrunID" />
+                <ScalarProperty Name="Miktar" ColumnName="Miktar" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="ToplamTutar" ColumnName="ToplamTutar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="TBLURUN">
             <EntityTypeMapping TypeName="DbTicariOtomasyonModel.TBLURUN">
               <MappingFragment StoreEntitySet="TBLURUN">
@@ -616,21 +904,6 @@ warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLGIDERLER' does not have a
                 <ScalarProperty Name="STOK" ColumnName="STOK" />
                 <ScalarProperty Name="KRITIKSEVIYE" ColumnName="KRITIKSEVIYE" />
                 <ScalarProperty Name="KATEGORI" ColumnName="KATEGORI" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TBLCARIHAREKET">
-            <EntityTypeMapping TypeName="DbTicariOtomasyonModel.TBLCARIHAREKET">
-              <MappingFragment StoreEntitySet="TBLCARIHAREKET">
-                <ScalarProperty Name="SATISID" ColumnName="SATISID" />
-                <ScalarProperty Name="URUN" ColumnName="URUN" />
-                <ScalarProperty Name="CARI" ColumnName="CARI" />
-                <ScalarProperty Name="PERSONEL" ColumnName="PERSONEL" />
-                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
-                <ScalarProperty Name="ADET" ColumnName="ADET" />
-                <ScalarProperty Name="BIRIMFIYAT" ColumnName="BIRIMFIYAT" />
-                <ScalarProperty Name="TOPLAM" ColumnName="TOPLAM" />
-                <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -659,6 +932,30 @@ warning 6002: The table/view 'DbTicariOtomasyon.dbo.TBLGIDERLER' does not have a
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="DbTicariOtomasyonModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="DbTicariOtomasyonModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="DbTicariOtomasyonModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="DbTicariOtomasyonModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DbTicariOtomasyonModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="DbTicariOtomasyonModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DbTicariOtomasyonModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="DbTicariOtomasyonModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="DbTicariOtomasyonModel.Store.sp_upgraddiagrams" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -11,25 +11,16 @@ using Ticari_Otomasyon_Proje.entity;
 
 namespace Ticari_Otomasyon_Proje.formlar
 {
-    public partial class FrmIstatistikler : Form
+    public partial class Frmistatislikler : Form
     {
-        public FrmIstatistikler()
+        public Frmistatislikler()
         {
             InitializeComponent();
         }
-
+        DbTicariOtomasyonEntities3 db = new DbTicariOtomasyonEntities3();
         private void panelControl1_Paint(object sender, PaintEventArgs e)
         {
-            panelControl1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat; // Stil 'Flat' olarak ayarlanıyor
-            
-        }
-        DbTicariOtomasyonEntities db = new DbTicariOtomasyonEntities();
-        private void FrmIstatistikler_Load(object sender, EventArgs e)
-        {
-            lblUrunSayisi1.Text = db.TBLURUN.Count().ToString();
-            lblKategoriSayisi1.Text = db.TBLKATEGORI.Count().ToString(); 
-            lblPersonelSayisi1.Text = db.TBLPERSONEL.Count().ToString();
-            lblPersonelSayisi1.Text = db.TBLPERSONEL.Count().ToString();
+            panelControl1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
         }
 
         private void panelControl2_Paint(object sender, PaintEventArgs e)
@@ -85,6 +76,19 @@ namespace Ticari_Otomasyon_Proje.formlar
         private void panelControl9_Paint(object sender, PaintEventArgs e)
         {
             panelControl9.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+        }
+
+        private void Frmistatislikler_Load(object sender, EventArgs e)
+        {
+            lblUrunSayisi1.Text = db.TBLURUN.Count().ToString();
+            lblKategoriSayisi1.Text = db.TBLKATEGORI.Count().ToString();
+            lblPersonelSayisi1.Text = db.TBLPERSONEL.Count().ToString();
+            lblToplamStok.Text = db.TBLURUN.Count().ToString();
+            lblEnDusukStokUrun.Text = db.TBLURUN.Where(x => x.KATEGORI == 1).Sum(y => y.STOK).ToString();
+            lblKrıtıkStok.Text = db.TBLURUN.Count(x => x.KRITIKSEVIYE == true).ToString();
+            lblYuksekStokUrun.Text = db.TBLURUN.OrderByDescending(x => x.STOK).Select(y => y.URUNAD).FirstOrDefault().ToString();
+            lblEnYuksekFiyatlıUrun.Text = db.TBLURUN.OrderByDescending(x => x.SATISFIYAT).Select(y => y.URUNAD).FirstOrDefault().ToString();
+            lblDusukFiyatlıUrun.Text = db.TBLURUN.OrderBy(x => x.SATISFIYAT).Select(y => y.URUNAD).FirstOrDefault().ToString();
         }
     }
 }

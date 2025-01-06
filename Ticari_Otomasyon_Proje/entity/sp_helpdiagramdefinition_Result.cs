@@ -10,15 +10,10 @@
 namespace Ticari_Otomasyon_Proje.entity
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class TBLKASA
+    public partial class sp_helpdiagramdefinition_Result
     {
-        public int ID { get; set; }
-        public Nullable<decimal> TUTAR { get; set; }
-        public string TUR { get; set; }
-        public string ACIKLAMA { get; set; }
-        public Nullable<System.DateTime> TARIH { get; set; }
-        public int GIDERID { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

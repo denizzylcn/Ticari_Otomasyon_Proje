@@ -14,7 +14,7 @@ namespace Ticari_Otomasyon_Proje.entity
     
     public partial class TBLILLER
     {
-        public int ID { get; set; }
-        public string SEHIR { get; set; }
+        public int id { get; set; }
+        public string sehir { get; set; }
     }
 }

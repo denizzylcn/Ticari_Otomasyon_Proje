@@ -12,13 +12,14 @@ namespace Ticari_Otomasyon_Proje.entity
     using System;
     using System.Collections.Generic;
     
-    public partial class TBLKASA
+    public partial class TBLSIPARISLER
     {
-        public int ID { get; set; }
-        public Nullable<decimal> TUTAR { get; set; }
-        public string TUR { get; set; }
-        public string ACIKLAMA { get; set; }
-        public Nullable<System.DateTime> TARIH { get; set; }
-        public int GIDERID { get; set; }
+        public int SıparısID { get; set; }
+        public Nullable<int> UrunID { get; set; }
+        public Nullable<short> Miktar { get; set; }
+        public Nullable<System.DateTime> Tarih { get; set; }
+        public Nullable<decimal> ToplamTutar { get; set; }
+    
+        public virtual TBLURUN TBLURUN { get; set; }
     }
 }

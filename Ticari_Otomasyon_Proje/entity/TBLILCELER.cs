@@ -14,8 +14,8 @@ namespace Ticari_Otomasyon_Proje.entity
     
     public partial class TBLILCELER
     {
-        public int ID { get; set; }
-        public string ILCE { get; set; }
-        public int SEHIR { get; set; }
+        public int id { get; set; }
+        public string ilce { get; set; }
+        public int sehir { get; set; }
     }
 }

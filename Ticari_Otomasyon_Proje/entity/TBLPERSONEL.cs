@@ -17,6 +17,7 @@ namespace Ticari_Otomasyon_Proje.entity
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TBLPERSONEL()
         {
+            this.TBLMUSTERIHAREKET = new HashSet<TBLMUSTERIHAREKET>();
             this.TBLFIRMAHAREKET = new HashSet<TBLFIRMAHAREKET>();
         }
     
@@ -26,6 +27,8 @@ namespace Ticari_Otomasyon_Proje.entity
         public Nullable<byte> PERSONELDEPARTMAN { get; set; }
     
         public virtual TBLDEPARTMAN TBLDEPARTMAN { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TBLMUSTERIHAREKET> TBLMUSTERIHAREKET { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBLFIRMAHAREKET> TBLFIRMAHAREKET { get; set; }
     }

@@ -10,15 +10,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Ticari_Otomasyon_Proje.entity;
 
-namespace Ticari_Otomasyon_Proje
+namespace Ticari_Otomasyon_Proje.formlar
 {
-    public partial class FrmUrunler : Form
+    public partial class FrmUrunler1 : Form
     {
-        public FrmUrunler()
+        public FrmUrunler1()
         {
             InitializeComponent();
         }
-        DbTicariOtomasyonEntities db = new DbTicariOtomasyonEntities(); 
+        DbTicariOtomasyonEntities3 db = new DbTicariOtomasyonEntities3();
+        private void FrmUrunler1_Load(object sender, EventArgs e)
+        {
+
+        }
         void urunler()
         {
             gridControl1.DataSource = (from x in db.TBLURUN
@@ -32,19 +36,10 @@ namespace Ticari_Otomasyon_Proje
                                            x.TBLKATEGORI.KATEGORIAD,
                                        }).ToList();
         }
-        private void FrmUrunler_Load(object sender, EventArgs e)
-        {
-            gridLookUpEdit1.Properties.DataSource = (from x in db.TBLKATEGORI
-                                                     select new
-                                                     {
-                                                         x.ID,
-                                                         x.KATEGORIAD
-                                                     }).ToList();
-
-        }
 
         private void BtnEkle_Click(object sender, EventArgs e)
         {
+
             TBLURUN t = new TBLURUN();
             t.URUNAD = TxtAd.Text;
             t.STOK = short.Parse(txtStok.Text);
@@ -73,7 +68,7 @@ namespace Ticari_Otomasyon_Proje
 
         private void BtnSıl_Click(object sender, EventArgs e)
         {
-            if(TxtID.Text != "")
+            if (TxtID.Text != "")
             {
                 int id = int.Parse(TxtID.Text);
                 var x = db.TBLURUN.Find(id);
@@ -89,16 +84,6 @@ namespace Ticari_Otomasyon_Proje
             }
         }
 
-        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-            TxtID.Text = gridView1.GetFocusedRowCellValue("URUNID").ToString();
-            TxtAd.Text = gridView1.GetFocusedRowCellValue("URUNAD").ToString();
-            txtAlisFiyat.Text = gridView1.GetFocusedRowCellValue("ALISFIYAT").ToString();
-            txtSatisFiyat.Text = gridView1.GetFocusedRowCellValue("SATISFIYAT").ToString();
-            txtStok.Text = gridView1.GetFocusedRowCellValue("STOK").ToString();
-            gridLookUpEdit1.Text = gridView1.GetFocusedRowCellValue("KATEGORIAD").ToString();
-        }
-
         private void BtnGuncelle_Click(object sender, EventArgs e)
         {
             int id = int.Parse(TxtID.Text);
@@ -110,9 +95,15 @@ namespace Ticari_Otomasyon_Proje
             x.KATEGORI = int.Parse(gridLookUpEdit1.EditValue.ToString());
             db.SaveChanges();
             XtraMessageBox.Show("Verileriniz başarılı bir şekilde güncellendi", "Güncelleme Bilgisi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-
+        }
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            TxtID.Text = gridView1.GetFocusedRowCellValue("URUNID").ToString();
+            TxtAd.Text = gridView1.GetFocusedRowCellValue("URUNAD").ToString();
+            txtAlisFiyat.Text = gridView1.GetFocusedRowCellValue("ALISFIYAT").ToString();
+            txtSatisFiyat.Text = gridView1.GetFocusedRowCellValue("SATISFIYAT").ToString();
+            txtStok.Text = gridView1.GetFocusedRowCellValue("STOK").ToString();
+            gridLookUpEdit1.Text = gridView1.GetFocusedRowCellValue("KATEGORIAD").ToString();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,23 +8,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 using Ticari_Otomasyon_Proje.entity;
 
-namespace Ticari_Otomasyon_Proje
+namespace Ticari_Otomasyon_Proje.formlar
 {
-    public partial class FrmKategoriler : Form
+    public partial class FrmKategoriler1 : Form
     {
-        public FrmKategoriler()
+        public FrmKategoriler1()
         {
             InitializeComponent();
         }
-
-        private void FrmKategoriler_Load(object sender, EventArgs e)
+        DbTicariOtomasyonEntities3 db = new DbTicariOtomasyonEntities3();
+        private void FrmKategoriler1_Load(object sender, EventArgs e)
         {
 
         }
-        DbTicariOtomasyonEntities db = new DbTicariOtomasyonEntities();
+
         private void BtnListele_Click(object sender, EventArgs e)
         {
             var kategoriler = from x in db.TBLKATEGORI
@@ -41,12 +41,12 @@ namespace Ticari_Otomasyon_Proje
             t.KATEGORIAD = TxtAd.Text;
             db.TBLKATEGORI.Add(t);
             db.SaveChanges();
-            XtraMessageBox.Show("Kategori ekleme işlemi başarılı bir şekilde gerçekleşti", "Bilgi" ,MessageBoxButtons.OK, MessageBoxIcon.Information);
+            XtraMessageBox.Show("Kategori ekleme işlemi başarılı bir şekilde gerçekleşti", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void BtnSıl_Click(object sender, EventArgs e)
         {
-            if(TxtID.Text!="")
+            if (TxtID.Text != "")
             {
                 int id = int.Parse(TxtID.Text);
                 var x = db.TBLKATEGORI.Find(id);
