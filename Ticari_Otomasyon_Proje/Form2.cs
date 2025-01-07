@@ -62,7 +62,7 @@ namespace Ticari_Otomasyon_Proje
         private void btnMusterıLıstesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             formlar.FrmMusterıLıstesı fr = new formlar.FrmMusterıLıstesı();
-            frm.MdiParent = this;
+            
             fr.Show();
         }
 
@@ -136,6 +136,18 @@ namespace Ticari_Otomasyon_Proje
       "Bunun dışında bize +90 (123) 456 78 90 numaralı telefondan da ulaşabilirsiniz. " +
       "WhatsApp üzerinden sorularınızı bize iletirseniz en hızlı şekilde geri dönüş sağlanacaktır.",
       "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnQr_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            formlar.FrmQrKod frm = new formlar.FrmQrKod();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void btnUrunRaporları_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
         }
     }
 }

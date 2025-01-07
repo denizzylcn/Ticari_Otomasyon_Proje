@@ -59,6 +59,21 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="MessagingToolkit.Barcode, Version=1.7.0.1, Culture=neutral, PublicKeyToken=4d44dd7196d3c1ac, processorArchitecture=x86">
+      <HintPath>..\packages\MessagingToolkit.Barcode.1.7.0.2\lib\net40\WPF\x86\MessagingToolkit.Barcode.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.Core, Version=1.8.3.0, Culture=neutral, PublicKeyToken=4d44dd7196d3c1ac, processorArchitecture=MSIL">
+      <HintPath>..\packages\MessagingToolkit.1.8.3\lib\net462\MessagingToolkit.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.MMS, Version=1.8.3.0, Culture=neutral, PublicKeyToken=4d44dd7196d3c1ac, processorArchitecture=MSIL">
+      <HintPath>..\packages\MessagingToolkit.1.8.3\lib\net462\MessagingToolkit.MMS.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.Pdu, Version=1.8.3.0, Culture=neutral, PublicKeyToken=4d44dd7196d3c1ac, processorArchitecture=MSIL">
+      <HintPath>..\packages\MessagingToolkit.1.8.3\lib\net462\MessagingToolkit.Pdu.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.QRCode, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MessagingToolkit.QRCode.1.3.0\lib\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -236,6 +251,12 @@
     <Compile Include="formlar\FrmPersonel.Designer.cs">
       <DependentUpon>FrmPersonel.cs</DependentUpon>
     </Compile>
+    <Compile Include="formlar\FrmQrKod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formlar\FrmQrKod.Designer.cs">
+      <DependentUpon>FrmQrKod.cs</DependentUpon>
+    </Compile>
     <Compile Include="formlar\FrmSiparisler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +274,12 @@
     </Compile>
     <Compile Include="formlar\FrmUrunler1.Designer.cs">
       <DependentUpon>FrmUrunler1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formlar\FrmUrunRaporları.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formlar\FrmUrunRaporları.Designer.cs">
+      <DependentUpon>FrmUrunRaporları.cs</DependentUpon>
     </Compile>
     <Compile Include="formlar\FrmYeniNot.cs">
       <SubType>Form</SubType>
@@ -307,6 +334,9 @@
     <EmbeddedResource Include="formlar\FrmPersonel.resx">
       <DependentUpon>FrmPersonel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formlar\FrmQrKod.resx">
+      <DependentUpon>FrmQrKod.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formlar\FrmSiparisler.resx">
       <DependentUpon>FrmSiparisler.cs</DependentUpon>
     </EmbeddedResource>
@@ -315,6 +345,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formlar\FrmUrunler1.resx">
       <DependentUpon>FrmUrunler1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formlar\FrmUrunRaporları.resx">
+      <DependentUpon>FrmUrunRaporları.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formlar\FrmYeniNot.resx">
       <DependentUpon>FrmYeniNot.cs</DependentUpon>
