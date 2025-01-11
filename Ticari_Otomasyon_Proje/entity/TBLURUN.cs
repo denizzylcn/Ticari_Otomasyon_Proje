@@ -34,6 +34,5 @@ namespace Ticari_Otomasyon_Proje.entity
         public virtual ICollection<TBLMUSTERIHAREKET> TBLMUSTERIHAREKET { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBLSIPARISLER> TBLSIPARISLER { get; set; }
-        public virtual TBLFIRMAHAREKET TBLFIRMAHAREKET { get; set; }
     }
 }

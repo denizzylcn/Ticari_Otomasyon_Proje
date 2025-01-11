@@ -14,11 +14,10 @@ namespace Ticari_Otomasyon_Proje.entity
     
     public partial class TBLKASA
     {
-        public int ID { get; set; }
+        public int GIDERID { get; set; }
         public Nullable<decimal> TUTAR { get; set; }
         public string TUR { get; set; }
         public string ACIKLAMA { get; set; }
         public Nullable<System.DateTime> TARIH { get; set; }
-        public int GIDERID { get; set; }
     }
 }

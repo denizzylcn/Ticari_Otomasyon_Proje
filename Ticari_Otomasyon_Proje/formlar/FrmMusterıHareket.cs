@@ -17,7 +17,7 @@ namespace Ticari_Otomasyon_Proje.formlar
         {
             InitializeComponent();
         }
-        DbTicariOtomasyonEntities3 db = new DbTicariOtomasyonEntities3();
+        DbTicariOtomasyonEntities4 db = new DbTicariOtomasyonEntities4();
         private void panelControl1_Paint(object sender, PaintEventArgs e)
         {
             panelControl1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;

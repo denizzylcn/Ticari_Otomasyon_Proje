@@ -12,23 +12,23 @@ using Ticari_Otomasyon_Proje.entity;
 
 namespace Ticari_Otomasyon_Proje.formlar
 {
-    public partial class FrmPersonel : Form
+    public partial class FrmDepartman : Form
     {
-        public FrmPersonel()
+        public FrmDepartman()
         {
             InitializeComponent();
         }
         DbTicariOtomasyonEntities4 db = new DbTicariOtomasyonEntities4();
-        private void FrmPersonel_Load(object sender, EventArgs e)
+        private void FrmDepartman_Load(object sender, EventArgs e)
         {
-            db.TBLPERSONEL.Load();
-            bindingSource1.DataSource = db.TBLPERSONEL.Local;
-            repositoryItemLookUpEdit4.DataSource=(from x in db.TBLDEPARTMAN
-                                                  select new
-                                                  {
-                                                      x.ID,
-                                                      x.DEPARTMANAD,
-                                                  }).ToList();
+            var degerler = db.TBLPERSONEL.OrderBy(x => x.TBLDEPARTMAN.DEPARTMANAD).GroupBy(y => y.TBLDEPARTMAN.DEPARTMANAD).
+                Select(z => new { Ad = z.Key, TOPLAM = z.Count() }).ToList();
+            foreach(var x in degerler)
+            {
+                chartControl2.Series["Departmanlar"].Points.AddPoint(x.Ad, short.Parse(x.TOPLAM.ToString()));
+            }
+            db.TBLDEPARTMAN.Load();
+            bindingSource1.DataSource = db.TBLDEPARTMAN.Local;
         }
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)

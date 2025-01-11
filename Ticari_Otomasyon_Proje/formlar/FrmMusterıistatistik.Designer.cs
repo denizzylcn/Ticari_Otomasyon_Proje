@@ -13,9 +13,9 @@
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+            if (disposing && db != null) // `db` veritabanı bağlamınız
             {
-                components.Dispose();
+                db.Dispose(); // Veritabanı bağlamını serbest bırak
             }
             base.Dispose(disposing);
         }
@@ -34,10 +34,10 @@
             DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView1 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.tBLILLERBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dbTicariOtomasyonDataSet = new Ticari_Otomasyon_Proje.DbTicariOtomasyonDataSet();
+            this.dbTicariOtomasyonDataSet = new Ticari_Otomasyon_Proje.DbTicariOtomasyonDataSet1();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.tBLILLERTableAdapter = new Ticari_Otomasyon_Proje.DbTicariOtomasyonDataSetTableAdapters.TBLILLERTableAdapter();
+            this.tBLILLERTableAdapter = new Ticari_Otomasyon_Proje.DbTicariOtomasyonDataSet1TableAdapters.TBLILLERTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
@@ -125,8 +125,8 @@
         private DevExpress.XtraCharts.ChartControl chartControl1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DbTicariOtomasyonDataSet dbTicariOtomasyonDataSet;
+        private DbTicariOtomasyonDataSet1 dbTicariOtomasyonDataSet;
         private System.Windows.Forms.BindingSource tBLILLERBindingSource;
-        private DbTicariOtomasyonDataSetTableAdapters.TBLILLERTableAdapter tBLILLERTableAdapter;
+        private DbTicariOtomasyonDataSet1TableAdapters.TBLILLERTableAdapter tBLILLERTableAdapter;
     }
 }

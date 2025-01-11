@@ -18,7 +18,6 @@ namespace Ticari_Otomasyon_Proje.entity
         public TBLPERSONEL()
         {
             this.TBLMUSTERIHAREKET = new HashSet<TBLMUSTERIHAREKET>();
-            this.TBLFIRMAHAREKET = new HashSet<TBLFIRMAHAREKET>();
         }
     
         public int PERSONELID { get; set; }
@@ -29,7 +28,5 @@ namespace Ticari_Otomasyon_Proje.entity
         public virtual TBLDEPARTMAN TBLDEPARTMAN { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBLMUSTERIHAREKET> TBLMUSTERIHAREKET { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TBLFIRMAHAREKET> TBLFIRMAHAREKET { get; set; }
     }
 }

@@ -13,9 +13,9 @@
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+            if (disposing && db != null) // `db` veritabanı bağlamınız
             {
-                components.Dispose();
+                db.Dispose(); // Veritabanı bağlamını serbest bırak
             }
             base.Dispose(disposing);
         }
@@ -50,7 +50,7 @@
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(204, 37);
+            this.labelControl1.Location = new System.Drawing.Point(109, 34);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(218, 24);
             this.labelControl1.TabIndex = 0;
@@ -59,7 +59,7 @@
             // txtUrunAd
             // 
             this.txtUrunAd.EditValue = "Ürün Adı";
-            this.txtUrunAd.Location = new System.Drawing.Point(244, 90);
+            this.txtUrunAd.Location = new System.Drawing.Point(149, 87);
             this.txtUrunAd.Name = "txtUrunAd";
             this.txtUrunAd.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.txtUrunAd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
@@ -74,7 +74,7 @@
             // txtStok
             // 
             this.txtStok.EditValue = "Alış Fiyatı";
-            this.txtStok.Location = new System.Drawing.Point(244, 146);
+            this.txtStok.Location = new System.Drawing.Point(149, 143);
             this.txtStok.Name = "txtStok";
             this.txtStok.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.txtStok.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
@@ -89,7 +89,7 @@
             // txtAlisFiyat
             // 
             this.txtAlisFiyat.EditValue = "Satış Fiyatı";
-            this.txtAlisFiyat.Location = new System.Drawing.Point(244, 207);
+            this.txtAlisFiyat.Location = new System.Drawing.Point(149, 204);
             this.txtAlisFiyat.Name = "txtAlisFiyat";
             this.txtAlisFiyat.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.txtAlisFiyat.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
@@ -104,7 +104,7 @@
             // txtSatisFiyat
             // 
             this.txtSatisFiyat.EditValue = "Stok Sayısı";
-            this.txtSatisFiyat.Location = new System.Drawing.Point(244, 270);
+            this.txtSatisFiyat.Location = new System.Drawing.Point(149, 267);
             this.txtSatisFiyat.Name = "txtSatisFiyat";
             this.txtSatisFiyat.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.txtSatisFiyat.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
@@ -118,7 +118,7 @@
             // 
             // lookUpEdit1
             // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(244, 333);
+            this.lookUpEdit1.Location = new System.Drawing.Point(149, 330);
             this.lookUpEdit1.Name = "lookUpEdit1";
             this.lookUpEdit1.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.lookUpEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
@@ -134,8 +134,8 @@
             // 
             // BtnKaydet
             // 
-            this.BtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.BtnKaydet.Location = new System.Drawing.Point(164, 403);
+            this.BtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnKaydet.ImageOptions.Image")));
+            this.BtnKaydet.Location = new System.Drawing.Point(69, 400);
             this.BtnKaydet.Name = "BtnKaydet";
             this.BtnKaydet.Size = new System.Drawing.Size(113, 42);
             this.BtnKaydet.TabIndex = 6;
@@ -144,8 +144,8 @@
             // 
             // BtnVazgec
             // 
-            this.BtnVazgec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.BtnVazgec.Location = new System.Drawing.Point(328, 403);
+            this.BtnVazgec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnVazgec.ImageOptions.Image")));
+            this.BtnVazgec.Location = new System.Drawing.Point(233, 400);
             this.BtnVazgec.Name = "BtnVazgec";
             this.BtnVazgec.Size = new System.Drawing.Size(111, 42);
             this.BtnVazgec.TabIndex = 7;
@@ -157,7 +157,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(700, 500);
+            this.ClientSize = new System.Drawing.Size(499, 500);
             this.Controls.Add(this.BtnVazgec);
             this.Controls.Add(this.BtnKaydet);
             this.Controls.Add(this.lookUpEdit1);
@@ -168,6 +168,7 @@
             this.Controls.Add(this.labelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmUrunEkle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmUrunEkle";
             this.Load += new System.EventHandler(this.FrmUrunEkle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtUrunAd.Properties)).EndInit();

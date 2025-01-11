@@ -17,7 +17,7 @@ namespace Ticari_Otomasyon_Proje.formlar
         {
             InitializeComponent();
         }
-        DbTicariOtomasyonEntities3 db = new DbTicariOtomasyonEntities3();
+        DbTicariOtomasyonEntities4 db = new DbTicariOtomasyonEntities4();
         private void FrmAnaForm_Load(object sender, EventArgs e)
         {
             var urun_stok = from x in db.TBLURUN

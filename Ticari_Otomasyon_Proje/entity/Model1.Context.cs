@@ -15,10 +15,10 @@ namespace Ticari_Otomasyon_Proje.entity
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class DbTicariOtomasyonEntities3 : DbContext
+    public partial class DbTicariOtomasyonEntities4 : DbContext
     {
-        public DbTicariOtomasyonEntities3()
-            : base("name=DbTicariOtomasyonEntities3")
+        public DbTicariOtomasyonEntities4()
+            : base("name=DbTicariOtomasyonEntities4")
         {
         }
     
@@ -29,7 +29,7 @@ namespace Ticari_Otomasyon_Proje.entity
     
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TBLDEPARTMAN> TBLDEPARTMAN { get; set; }
-        public virtual DbSet<TBLFIRMA> TBLFIRMA { get; set; }
+        public virtual DbSet<TBLGIDERLER> TBLGIDERLER { get; set; }
         public virtual DbSet<TBLILCELER> TBLILCELER { get; set; }
         public virtual DbSet<TBLILLER> TBLILLER { get; set; }
         public virtual DbSet<TBLKASA> TBLKASA { get; set; }
@@ -40,8 +40,6 @@ namespace Ticari_Otomasyon_Proje.entity
         public virtual DbSet<TBLPERSONEL> TBLPERSONEL { get; set; }
         public virtual DbSet<TBLSIPARISLER> TBLSIPARISLER { get; set; }
         public virtual DbSet<TBLURUN> TBLURUN { get; set; }
-        public virtual DbSet<TBLFIRMAHAREKET> TBLFIRMAHAREKET { get; set; }
-        public virtual DbSet<TBLGIDERLER> TBLGIDERLER { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

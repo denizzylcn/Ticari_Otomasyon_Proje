@@ -18,9 +18,13 @@ namespace Ticari_Otomasyon_Proje.formlar
         {
             InitializeComponent();
         }
-        DbTicariOtomasyonEntities3 db = new DbTicariOtomasyonEntities3();
+        DbTicariOtomasyonEntities4 db = new DbTicariOtomasyonEntities4();
         private void FrmMusterKart_Load(object sender, EventArgs e)
         {
+            // TODO: Bu kod satırı 'dbTicariOtomasyonDataSet1.TBLILCELER' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.tBLILCELERTableAdapter.Fill(this.dbTicariOtomasyonDataSet1.TBLILCELER);
+            // TODO: Bu kod satırı 'dbTicariOtomasyonDataSet.TBLILLER' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.tBLILLERTableAdapter.Fill(this.dbTicariOtomasyonDataSet.TBLILLER);
             lookUpEditil.Properties.DataSource = (from x in db.TBLILLER
                                                                    select new
                                                                    {

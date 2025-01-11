@@ -13,9 +13,9 @@
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+            if (disposing && db != null) // Eğer veritabanı bağlamı varsa
             {
-                components.Dispose();
+                db.Dispose(); // Veritabanı bağlamını serbest bırak
             }
             base.Dispose(disposing);
         }

@@ -18,7 +18,7 @@ namespace Ticari_Otomasyon_Proje.formlar
             InitializeComponent();
         }
 
-        DbTicariOtomasyonEntities3 db = new DbTicariOtomasyonEntities3();
+        DbTicariOtomasyonEntities4 db = new DbTicariOtomasyonEntities4();
         private void FrmMusterıFormLıstesı_Load(object sender, EventArgs e)
         {
             gridControl1.DataSource = (from x in db.TBLMUSTERI

@@ -22,7 +22,7 @@ namespace Ticari_Otomasyon_Proje.formlar
         {
 
         }
-        DbTicariOtomasyonEntities3 db = new DbTicariOtomasyonEntities3();
+        DbTicariOtomasyonEntities4 db = new DbTicariOtomasyonEntities4();
         private void FrmKategoriIstatistik_Load(object sender, EventArgs e)
         {
            
@@ -76,6 +76,11 @@ namespace Ticari_Otomasyon_Proje.formlar
         private void panelControl2_Paint(object sender, PaintEventArgs e)
         {
             panelControl2.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+        }
+
+        private void lblKategoriSayisi1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

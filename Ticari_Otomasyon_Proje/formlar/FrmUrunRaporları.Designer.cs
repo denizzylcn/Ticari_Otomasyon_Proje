@@ -55,7 +55,7 @@
             // 
             // btnPdfRaporu
             // 
-            this.btnPdfRaporu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnPdfRaporu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPdfRaporu.ImageOptions.Image")));
             this.btnPdfRaporu.Location = new System.Drawing.Point(12, 54);
             this.btnPdfRaporu.Name = "btnPdfRaporu";
             this.btnPdfRaporu.Size = new System.Drawing.Size(189, 61);
@@ -65,7 +65,7 @@
             // 
             // btnExcelRaporu
             // 
-            this.btnExcelRaporu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btnExcelRaporu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExcelRaporu.ImageOptions.Image")));
             this.btnExcelRaporu.Location = new System.Drawing.Point(259, 54);
             this.btnExcelRaporu.Name = "btnExcelRaporu";
             this.btnExcelRaporu.Size = new System.Drawing.Size(189, 61);
@@ -74,7 +74,7 @@
             // 
             // btniptal
             // 
-            this.btniptal.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.btniptal.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btniptal.ImageOptions.Image")));
             this.btniptal.Location = new System.Drawing.Point(523, 54);
             this.btniptal.Name = "btniptal";
             this.btniptal.Size = new System.Drawing.Size(189, 61);
@@ -92,6 +92,7 @@
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmUrunRaporları";
             this.Text = "FrmUrunRaporları";
+            this.Load += new System.EventHandler(this.FrmUrunRaporları_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);

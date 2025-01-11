@@ -17,7 +17,7 @@ namespace Ticari_Otomasyon_Proje.formlar
         {
             InitializeComponent();
         }
-        DbTicariOtomasyonEntities3 db = new DbTicariOtomasyonEntities3();
+        DbTicariOtomasyonEntities4 db = new DbTicariOtomasyonEntities4();
         private void FrmKasaListesi_Load(object sender, EventArgs e)
         {
             var kasa_verileri = db.TBLKASA.ToList();

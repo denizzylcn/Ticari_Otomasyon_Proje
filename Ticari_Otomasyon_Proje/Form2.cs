@@ -20,134 +20,141 @@ namespace Ticari_Otomasyon_Proje
             InitializeComponent();
             this.IsMdiContainer = true;
         }
-        DbTicariOtomasyonEntities3 db = new DbTicariOtomasyonEntities3();
+
+        DbTicariOtomasyonEntities4 db = new DbTicariOtomasyonEntities4();
+
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            // Form yüklendiğinde yapılacak işlemler
         }
 
-        private void BtnAnaForm_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        // OpenForm metodu
+        private void OpenForm<T>() where T : Form, new()
         {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is T)
+                {
+                    form.BringToFront();
+                    return;
+                }
+            }
 
-            
+            T newForm = new T
+            {
+                MdiParent = this,
+                FormBorderStyle = FormBorderStyle.None,
+                Dock = DockStyle.Fill
+            };
+            newForm.Show();
         }
 
+        // ItemClick metotları
         private void BtnKategoriListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            formlar.FrmKategoriler1 frm = new formlar.FrmKategoriler1();
-            frm.MdiParent = this;
-            frm.Show();
+            OpenForm<formlar.FrmKategoriler1>();
         }
 
         private void BtnYeniKategori_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            formlar.FrmKategoriEkle fr = new formlar.FrmKategoriEkle();
-            fr.Show();
-        }
-
-        private void BtnYeniUrun_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
-            formlar.FrmUrunEkle fr = new formlar.FrmUrunEkle();
-            fr.Show();
-        }
-
-        private void BtnKategoriIstatistik_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            formlar.FrmKategoriIstatistik frm = new formlar.FrmKategoriIstatistik();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
-        private void btnMusterıLıstesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            formlar.FrmMusterıLıstesı fr = new formlar.FrmMusterıLıstesı();
-            
-            fr.Show();
+            OpenForm<formlar.FrmKategoriEkle>();
         }
 
         private void BtnUrunListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            formlar.FrmUrunler1 frm = new formlar.FrmUrunler1();
-            frm.MdiParent = this;
-            frm.Show();
+            OpenForm<formlar.FrmUrunler1>();
         }
 
-        private void BtnUrunistatislikleri_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BtnKategoriIstatistik_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            formlar.Frmistatislikler frm = new formlar.Frmistatislikler();
-            frm.MdiParent = this;
-            frm.Show();
+            OpenForm<formlar.FrmKategoriIstatistik>();
+        }
+
+        private void btnMusterıLıstesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            OpenForm<formlar.FrmMusterıLıstesı>();
         }
 
         private void btnYeniMusterı_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            formlar.FrmMusterKart fr = new formlar.FrmMusterKart();
-            fr.Show();
+            OpenForm<formlar.FrmMusterKart>();
         }
 
         private void BtnMusterıIstatistik_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            formlar.FrmMusterıistatistik frm = new formlar.FrmMusterıistatistik();
-            frm.MdiParent = this;
-            frm.Show();
+            OpenForm<formlar.FrmMusterıistatistik>();
         }
 
         private void btnNotlar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            formlar.FrmNotlar frm = new formlar.FrmNotlar();
-            frm.MdiParent = this;
-            frm.Show();
+            OpenForm<formlar.FrmNotlar>();
         }
 
         private void btnKasaListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            formlar.FrmKasaListesi frm = new formlar.FrmKasaListesi();
-            frm.MdiParent = this;
-            frm.Show();
+            OpenForm<formlar.FrmKasaListesi>();
         }
 
         private void btnGiderler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            formlar.FrmGider frm = new formlar.FrmGider();
-            frm.Show();
+            OpenForm<formlar.FrmGider>();
         }
 
         private void btnYeniNot_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            formlar.FrmYeniNot frm = new formlar.FrmYeniNot();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
-        private void btnWord_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            System.Diagnostics.Process.Start("winword");
-        }
-
-        private void btnHesapMakinesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            System.Diagnostics.Process.Start("calc.exe");
-        }
-
-        private void btnYardım_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            XtraMessageBox.Show( "Projede alacağınız her türlü hata için destek mail adresi: testQgmail.com. " +
-      "Bunun dışında bize +90 (123) 456 78 90 numaralı telefondan da ulaşabilirsiniz. " +
-      "WhatsApp üzerinden sorularınızı bize iletirseniz en hızlı şekilde geri dönüş sağlanacaktır.",
-      "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            OpenForm<formlar.FrmYeniNot>();
         }
 
         private void btnQr_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            formlar.FrmQrKod frm = new formlar.FrmQrKod();
-            frm.MdiParent = this;
-            frm.Show();
+            OpenForm<formlar.FrmQrKod>();
         }
 
         private void btnUrunRaporları_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            OpenForm<formlar.FrmUrunRaporları>();
+        }
 
+        private void BtnPersonelLıstesı_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            OpenForm<formlar.FrmPersonel>();
+        }
+
+        private void btnDepartmanListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            OpenForm<formlar.FrmDepartman>();
+        }
+        private void btnWord_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("winword");
+
+        }
+        private void btnHesapMakinesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("calc.exe");
+        }
+        private void btnYardım_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            XtraMessageBox.Show(
+                "Projede alacağınız her türlü hata için destek mail adresi: testQgmail.com. " +
+                "Bunun dışında bize +90 (123) 456 78 90 numaralı telefondan da ulaşabilirsiniz. " +
+                "WhatsApp üzerinden sorularınızı bize iletirseniz en hızlı şekilde geri dönüş sağlanacaktır.",
+                "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void BtnYeniUrun_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            formlar.FrmUrunEkle frm =new formlar.FrmUrunEkle();
+            
+            frm.Show();
+        }
+
+        private void btnMusterıHareketlerı_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            formlar.FrmMusterıHareket frm = new formlar.FrmMusterıHareket();
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }
+

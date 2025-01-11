@@ -17,7 +17,7 @@ namespace Ticari_Otomasyon_Proje.formlar
         {
             InitializeComponent();
         }
-        DbTicariOtomasyonEntities3 db = new DbTicariOtomasyonEntities3();
+        DbTicariOtomasyonEntities4 db = new DbTicariOtomasyonEntities4();
         private void panelControl1_Paint(object sender, PaintEventArgs e)
         {
             panelControl1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
@@ -28,26 +28,15 @@ namespace Ticari_Otomasyon_Proje.formlar
             panelControl2.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
         }
 
-        private void panelControl3_Paint(object sender, PaintEventArgs e)
-        {
-            panelControl3.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
-        }
+        
 
         private void panelControl4_Paint(object sender, PaintEventArgs e)
         {
             panelControl4.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
         }
 
-        private void panelControl8_Paint(object sender, PaintEventArgs e)
-        {
-            panelControl8.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
-        }
-
-        private void panelControl7_Paint(object sender, PaintEventArgs e)
-        {
-            panelControl7.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
-        }
-
+        
+        
         private void panelControl6_Paint(object sender, PaintEventArgs e)
         {
             panelControl6.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;

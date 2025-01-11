@@ -19,7 +19,7 @@ namespace Ticari_Otomasyon_Proje.formlar
         {
             InitializeComponent();
         }
-        DbTicariOtomasyonEntities3 db = new DbTicariOtomasyonEntities3();
+        DbTicariOtomasyonEntities4 db = new DbTicariOtomasyonEntities4();
 
         private void btnListele_Click(object sender, EventArgs e)
         {
@@ -87,7 +87,7 @@ namespace Ticari_Otomasyon_Proje.formlar
 
         private void gridView1_FocusedRowChanged_1(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            txtID.Text = gridView1.GetFocusedRowCellValue("CARIID").ToString();
+            txtID.Text = gridView1.GetFocusedRowCellValue("MUSTERIID").ToString();
             txtAd.Text = gridView1.GetFocusedRowCellValue("AD").ToString();
             txtSoyad.Text = gridView1.GetFocusedRowCellValue("SOYAD").ToString();
             txtTC.Text = gridView1.GetFocusedRowCellValue("TC").ToString();

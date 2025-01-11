@@ -17,7 +17,7 @@ namespace Ticari_Otomasyon_Proje.formlar
         {
             InitializeComponent();
         }
-        DbTicariOtomasyonEntities3 db = new DbTicariOtomasyonEntities3();
+        DbTicariOtomasyonEntities4 db = new DbTicariOtomasyonEntities4();
         void urunler()
         {
             gridControl1.DataSource = (from x in db.TBLURUN
@@ -40,6 +40,11 @@ namespace Ticari_Otomasyon_Proje.formlar
         {
             string path = "Dosya1.Pdf";
             gridControl1.ExportToPdf(path);
+        }
+
+        private void FrmUrunRaporları_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

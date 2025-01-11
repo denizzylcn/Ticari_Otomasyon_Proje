@@ -14,7 +14,7 @@ namespace Ticari_Otomasyon_Proje.formlar
 {
     public partial class FrmKategoriEkle : Form
     {
-        DbTicariOtomasyonEntities3 db = new DbTicariOtomasyonEntities3();
+        DbTicariOtomasyonEntities4 db = new DbTicariOtomasyonEntities4();
 
         public FrmKategoriEkle()
         {

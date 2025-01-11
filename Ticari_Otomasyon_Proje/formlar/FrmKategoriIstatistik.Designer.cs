@@ -13,9 +13,9 @@
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+            if (disposing && db != null) // `db` veritabanı bağlamınız
             {
-                components.Dispose();
+                db.Dispose(); // Veritabanı bağlamını serbest bırak
             }
             base.Dispose(disposing);
         }
@@ -64,7 +64,7 @@
             this.panelControl1.Controls.Add(this.lblKategoriSayisi1);
             this.panelControl1.Controls.Add(this.lblKategoriSayisi);
             this.panelControl1.Location = new System.Drawing.Point(744, 22);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(6);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(312, 156);
             this.panelControl1.TabIndex = 0;
@@ -77,11 +77,12 @@
             this.lblKategoriSayisi1.Appearance.Options.UseFont = true;
             this.lblKategoriSayisi1.Appearance.Options.UseForeColor = true;
             this.lblKategoriSayisi1.Location = new System.Drawing.Point(12, 88);
-            this.lblKategoriSayisi1.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.lblKategoriSayisi1.Margin = new System.Windows.Forms.Padding(10);
             this.lblKategoriSayisi1.Name = "lblKategoriSayisi1";
             this.lblKategoriSayisi1.Size = new System.Drawing.Size(174, 36);
             this.lblKategoriSayisi1.TabIndex = 4;
             this.lblKategoriSayisi1.Text = "labelControl3";
+            this.lblKategoriSayisi1.Click += new System.EventHandler(this.lblKategoriSayisi1_Click);
             // 
             // lblKategoriSayisi
             // 
@@ -93,7 +94,7 @@
             this.lblKategoriSayisi.Appearance.Options.UseForeColor = true;
             this.lblKategoriSayisi.LineColor = System.Drawing.Color.White;
             this.lblKategoriSayisi.Location = new System.Drawing.Point(68, 36);
-            this.lblKategoriSayisi.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.lblKategoriSayisi.Margin = new System.Windows.Forms.Padding(10);
             this.lblKategoriSayisi.Name = "lblKategoriSayisi";
             this.lblKategoriSayisi.Size = new System.Drawing.Size(109, 21);
             this.lblKategoriSayisi.TabIndex = 3;
@@ -108,7 +109,7 @@
             this.panelControl2.Controls.Add(this.lblEnFazlaUrunuKategori);
             this.panelControl2.Controls.Add(this.labelControl4);
             this.panelControl2.Location = new System.Drawing.Point(1399, 22);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(8);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(312, 156);
             this.panelControl2.TabIndex = 1;
@@ -121,7 +122,7 @@
             this.lblEnFazlaUrunuKategori.Appearance.Options.UseFont = true;
             this.lblEnFazlaUrunuKategori.Appearance.Options.UseForeColor = true;
             this.lblEnFazlaUrunuKategori.Location = new System.Drawing.Point(15, 88);
-            this.lblEnFazlaUrunuKategori.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.lblEnFazlaUrunuKategori.Margin = new System.Windows.Forms.Padding(12);
             this.lblEnFazlaUrunuKategori.Name = "lblEnFazlaUrunuKategori";
             this.lblEnFazlaUrunuKategori.Size = new System.Drawing.Size(174, 36);
             this.lblEnFazlaUrunuKategori.TabIndex = 6;
@@ -137,7 +138,7 @@
             this.labelControl4.Appearance.Options.UseForeColor = true;
             this.labelControl4.LineColor = System.Drawing.Color.White;
             this.labelControl4.Location = new System.Drawing.Point(10, 36);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(12);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(183, 21);
             this.labelControl4.TabIndex = 5;
@@ -151,7 +152,7 @@
             this.panelControl3.Controls.Add(this.lblSonEklenenKategori);
             this.panelControl3.Controls.Add(this.labelControl2);
             this.panelControl3.Location = new System.Drawing.Point(1070, 22);
-            this.panelControl3.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.panelControl3.Margin = new System.Windows.Forms.Padding(8);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(312, 156);
             this.panelControl3.TabIndex = 2;
@@ -164,7 +165,7 @@
             this.lblSonEklenenKategori.Appearance.Options.UseFont = true;
             this.lblSonEklenenKategori.Appearance.Options.UseForeColor = true;
             this.lblSonEklenenKategori.Location = new System.Drawing.Point(15, 85);
-            this.lblSonEklenenKategori.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.lblSonEklenenKategori.Margin = new System.Windows.Forms.Padding(12);
             this.lblSonEklenenKategori.Name = "lblSonEklenenKategori";
             this.lblSonEklenenKategori.Size = new System.Drawing.Size(174, 36);
             this.lblSonEklenenKategori.TabIndex = 6;
@@ -180,7 +181,7 @@
             this.labelControl2.Appearance.Options.UseForeColor = true;
             this.labelControl2.LineColor = System.Drawing.Color.White;
             this.labelControl2.Location = new System.Drawing.Point(25, 36);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(12);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(162, 21);
             this.labelControl2.TabIndex = 5;
@@ -189,10 +190,10 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6);
             this.gridControl1.Location = new System.Drawing.Point(-1, 5);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(6);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(732, 611);
             this.gridControl1.TabIndex = 3;

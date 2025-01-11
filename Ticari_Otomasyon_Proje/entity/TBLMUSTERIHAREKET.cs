@@ -16,7 +16,7 @@ namespace Ticari_Otomasyon_Proje.entity
     {
         public int SATISID { get; set; }
         public Nullable<int> URUN { get; set; }
-        public int MUSTERIID { get; set; }
+        public Nullable<int> MUSTERIID { get; set; }
         public Nullable<int> PERSONEL { get; set; }
         public Nullable<System.DateTime> TARIH { get; set; }
         public Nullable<short> ADET { get; set; }
