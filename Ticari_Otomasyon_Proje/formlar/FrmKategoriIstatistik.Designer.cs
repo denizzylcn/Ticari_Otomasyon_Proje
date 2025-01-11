@@ -59,7 +59,7 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(15)))), ((int)(((byte)(64)))));
+            this.panelControl1.Appearance.BackColor = System.Drawing.Color.RosyBrown;
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.Controls.Add(this.lblKategoriSayisi1);
             this.panelControl1.Controls.Add(this.lblKategoriSayisi);
@@ -147,7 +147,7 @@
             // 
             // panelControl3
             // 
-            this.panelControl3.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(109)))), ((int)(((byte)(224)))));
+            this.panelControl3.Appearance.BackColor = System.Drawing.Color.Brown;
             this.panelControl3.Appearance.Options.UseBackColor = true;
             this.panelControl3.Controls.Add(this.lblSonEklenenKategori);
             this.panelControl3.Controls.Add(this.labelControl2);
@@ -235,7 +235,7 @@
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "FrmKategoriIstatistik";
-            this.Text = "FrmKategoriIstatistik";
+            this.Text = "Kategori İstatistik";
             this.Load += new System.EventHandler(this.FrmKategoriIstatistik_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);

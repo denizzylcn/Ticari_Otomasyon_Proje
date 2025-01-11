@@ -110,11 +110,7 @@ namespace Ticari_Otomasyon_Proje
             OpenForm<formlar.FrmQrKod>();
         }
 
-        private void btnUrunRaporları_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            OpenForm<formlar.FrmUrunRaporları>();
-        }
-
+       
         private void BtnPersonelLıstesı_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm<formlar.FrmPersonel>();
@@ -151,9 +147,17 @@ namespace Ticari_Otomasyon_Proje
 
         private void btnMusterıHareketlerı_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            formlar.FrmMusterıHareket frm = new formlar.FrmMusterıHareket();
-            frm.MdiParent = this;
-            frm.Show();
+            OpenForm<formlar.FrmMusterıHareket>();
+        }
+
+        private void BtnAnaForm_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            OpenForm<formlar.FrmAnaForm>();
+        }
+
+        private void btnYoutube_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            webBrowser1.Navigate("https:www.youtube.com/");
         }
     }
 }

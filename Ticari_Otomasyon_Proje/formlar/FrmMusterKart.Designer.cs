@@ -56,11 +56,11 @@
             this.Btniptal = new DevExpress.XtraEditors.SimpleButton();
             this.lookUpEditil = new DevExpress.XtraEditors.LookUpEdit();
             this.lookUpEditilce = new DevExpress.XtraEditors.LookUpEdit();
+            this.tBLILCELERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbTicariOtomasyonDataSet1 = new Ticari_Otomasyon_Proje.DbTicariOtomasyonDataSet1();
             this.dbTicariOtomasyonDataSet = new Ticari_Otomasyon_Proje.DbTicariOtomasyonDataSet1();
             this.tBLILLERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tBLILLERTableAdapter = new Ticari_Otomasyon_Proje.DbTicariOtomasyonDataSet1TableAdapters.TBLILLERTableAdapter();
-            this.dbTicariOtomasyonDataSet1 = new Ticari_Otomasyon_Proje.DbTicariOtomasyonDataSet1();
-            this.tBLILCELERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tBLILCELERTableAdapter = new Ticari_Otomasyon_Proje.DbTicariOtomasyonDataSet1TableAdapters.TBLILCELERTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAd.Properties)).BeginInit();
@@ -78,10 +78,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit8.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditil.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditilce.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLILCELERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbTicariOtomasyonDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbTicariOtomasyonDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLILLERBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbTicariOtomasyonDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBLILCELERBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureEdit1
@@ -361,6 +361,16 @@
             this.lookUpEditilce.Size = new System.Drawing.Size(195, 22);
             this.lookUpEditilce.TabIndex = 27;
             // 
+            // tBLILCELERBindingSource
+            // 
+            this.tBLILCELERBindingSource.DataMember = "TBLILCELER";
+            this.tBLILCELERBindingSource.DataSource = this.dbTicariOtomasyonDataSet1;
+            // 
+            // dbTicariOtomasyonDataSet1
+            // 
+            this.dbTicariOtomasyonDataSet1.DataSetName = "DbTicariOtomasyonDataSet1";
+            this.dbTicariOtomasyonDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // dbTicariOtomasyonDataSet
             // 
             this.dbTicariOtomasyonDataSet.DataSetName = "DbTicariOtomasyonDataSet";
@@ -374,16 +384,6 @@
             // tBLILLERTableAdapter
             // 
             this.tBLILLERTableAdapter.ClearBeforeFill = true;
-            // 
-            // dbTicariOtomasyonDataSet1
-            // 
-            this.dbTicariOtomasyonDataSet1.DataSetName = "DbTicariOtomasyonDataSet1";
-            this.dbTicariOtomasyonDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tBLILCELERBindingSource
-            // 
-            this.tBLILCELERBindingSource.DataMember = "TBLILCELER";
-            this.tBLILCELERBindingSource.DataSource = this.dbTicariOtomasyonDataSet1;
             // 
             // tBLILCELERTableAdapter
             // 
@@ -421,7 +421,7 @@
             this.Controls.Add(this.txtAd);
             this.Controls.Add(this.pictureEdit1);
             this.Name = "FrmMusterKart";
-            this.Text = "FrmMusterKart";
+            this.Text = "Müşteri Kart";
             this.Load += new System.EventHandler(this.FrmMusterKart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAd.Properties)).EndInit();
@@ -439,10 +439,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit8.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditil.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditilce.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLILCELERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbTicariOtomasyonDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbTicariOtomasyonDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLILLERBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbTicariOtomasyonDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBLILCELERBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

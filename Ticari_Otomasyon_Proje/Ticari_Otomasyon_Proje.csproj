@@ -263,12 +263,6 @@
     <Compile Include="formlar\FrmUrunler1.Designer.cs">
       <DependentUpon>FrmUrunler1.cs</DependentUpon>
     </Compile>
-    <Compile Include="formlar\FrmUrunRaporları.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formlar\FrmUrunRaporları.Designer.cs">
-      <DependentUpon>FrmUrunRaporları.cs</DependentUpon>
-    </Compile>
     <Compile Include="formlar\FrmYeniNot.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -336,9 +330,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formlar\FrmUrunler1.resx">
       <DependentUpon>FrmUrunler1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formlar\FrmUrunRaporları.resx">
-      <DependentUpon>FrmUrunRaporları.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formlar\FrmYeniNot.resx">
       <DependentUpon>FrmYeniNot.cs</DependentUpon>

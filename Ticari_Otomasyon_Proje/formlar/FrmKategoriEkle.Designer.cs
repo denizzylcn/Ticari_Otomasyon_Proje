@@ -44,7 +44,7 @@
             // BtnKaydet
             // 
             this.BtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnKaydet.ImageOptions.Image")));
-            this.BtnKaydet.Location = new System.Drawing.Point(296, 228);
+            this.BtnKaydet.Location = new System.Drawing.Point(259, 224);
             this.BtnKaydet.Name = "BtnKaydet";
             this.BtnKaydet.Size = new System.Drawing.Size(113, 48);
             this.BtnKaydet.TabIndex = 1;
@@ -53,20 +53,22 @@
             // 
             // txtKategoriAd
             // 
-            this.txtKategoriAd.Location = new System.Drawing.Point(352, 159);
+            this.txtKategoriAd.Location = new System.Drawing.Point(329, 150);
             this.txtKategoriAd.Name = "txtKategoriAd";
-            this.txtKategoriAd.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.txtKategoriAd.Properties.Appearance.BackColor = System.Drawing.Color.Thistle;
+            this.txtKategoriAd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.txtKategoriAd.Properties.Appearance.ForeColor = System.Drawing.Color.White;
             this.txtKategoriAd.Properties.Appearance.Options.UseBackColor = true;
+            this.txtKategoriAd.Properties.Appearance.Options.UseFont = true;
             this.txtKategoriAd.Properties.Appearance.Options.UseForeColor = true;
             this.txtKategoriAd.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.txtKategoriAd.Size = new System.Drawing.Size(125, 20);
+            this.txtKategoriAd.Size = new System.Drawing.Size(203, 32);
             this.txtKategoriAd.TabIndex = 2;
             // 
             // BtnVazgec
             // 
             this.BtnVazgec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnVazgec.ImageOptions.Image")));
-            this.BtnVazgec.Location = new System.Drawing.Point(456, 228);
+            this.BtnVazgec.Location = new System.Drawing.Point(419, 224);
             this.BtnVazgec.Name = "BtnVazgec";
             this.BtnVazgec.Size = new System.Drawing.Size(113, 48);
             this.BtnVazgec.TabIndex = 3;
@@ -77,7 +79,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BtnVazgec);
             this.Controls.Add(this.txtKategoriAd);

@@ -20,24 +20,7 @@ namespace Ticari_Otomasyon_Proje.formlar
         DbTicariOtomasyonEntities4 db = new DbTicariOtomasyonEntities4();
         private void FrmAnaForm_Load(object sender, EventArgs e)
         {
-            var urun_stok = from x in db.TBLURUN
-                            select new
-                            {
-                                x.URUNAD,
-                                x.STOK,
-                            };
-            gridUrunStok.DataSource = urun_stok.ToList();
-
-            var son5astis = from x in db.TBLMUSTERIHAREKET
-                            select new
-                            {
-                                x.TBLURUN.URUNAD,
-                                x.ADET,
-                                x.TOPLAM,
-                                x.SATISID,
-                            };
-            gridSon5Satis.DataSource = son5astis.OrderByDescending(x => x.SATISID).Take(5).ToList();
-            gridView2.Columns["SATIS ID"].Visible = false;
+            
 
 
             DateTime bugun = DateTime.Today;
@@ -50,6 +33,15 @@ namespace Ticari_Otomasyon_Proje.formlar
                                      }).Where(x => x.TARIH == bugun).ToList();
             gridbugunyapilacakar.DataSource = bugunyapilacaklar;
             gridView1.Columns["TARIH"].Visible = false;
+
+            var musterı = (from x in db.TBLMUSTERI
+                           select new
+                           {
+                               x.AD,
+                               x.SOYAD,
+                               x.TELEFON,
+                           }).ToList();
+            gridControl4.DataSource = musterı;
         }
     }
 }

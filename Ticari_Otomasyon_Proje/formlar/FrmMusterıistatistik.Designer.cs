@@ -77,10 +77,10 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6);
             this.gridControl1.Location = new System.Drawing.Point(3, 15);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(6);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(448, 506);
             this.gridControl1.TabIndex = 1;
@@ -106,7 +106,7 @@
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.chartControl1);
             this.Name = "FrmMusterıistatistik";
-            this.Text = "FrmMusterıistatistik";
+            this.Text = "Müşteri İstatistik";
             this.Load += new System.EventHandler(this.FrmMusterıistatistik_Load);
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).EndInit();

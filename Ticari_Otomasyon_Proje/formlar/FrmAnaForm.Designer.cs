@@ -34,9 +34,6 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.gridUrunStok = new DevExpress.XtraGrid.GridControl();
             this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-            this.gridSon5Satis = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl4 = new DevExpress.XtraGrid.GridControl();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -48,10 +45,6 @@
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridUrunStok)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
-            this.groupControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridSon5Satis)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).BeginInit();
@@ -65,7 +58,7 @@
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(491, 363);
             this.groupControl3.TabIndex = 13;
-            this.groupControl3.Text = "groupControl3";
+            this.groupControl3.Text = "Bugün Yapılacaklar";
             // 
             // gridbugunyapilacakar
             // 
@@ -89,7 +82,7 @@
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(474, 363);
             this.groupControl2.TabIndex = 14;
-            this.groupControl2.Text = "groupControl2";
+            this.groupControl2.Text = "Ürün-Stok Listesi";
             // 
             // gridUrunStok
             // 
@@ -106,38 +99,14 @@
             this.gridView5.GridControl = this.gridUrunStok;
             this.gridView5.Name = "gridView5";
             // 
-            // groupControl4
-            // 
-            this.groupControl4.Controls.Add(this.gridSon5Satis);
-            this.groupControl4.Location = new System.Drawing.Point(12, 401);
-            this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(491, 336);
-            this.groupControl4.TabIndex = 15;
-            this.groupControl4.Text = "groupControl4";
-            // 
-            // gridSon5Satis
-            // 
-            this.gridSon5Satis.Location = new System.Drawing.Point(17, 31);
-            this.gridSon5Satis.MainView = this.gridView2;
-            this.gridSon5Satis.Name = "gridSon5Satis";
-            this.gridSon5Satis.Size = new System.Drawing.Size(445, 291);
-            this.gridSon5Satis.TabIndex = 5;
-            this.gridSon5Satis.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
-            // 
-            // gridView2
-            // 
-            this.gridView2.GridControl = this.gridSon5Satis;
-            this.gridView2.Name = "gridView2";
-            // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.gridControl4);
-            this.groupControl1.Location = new System.Drawing.Point(537, 391);
+            this.groupControl1.Location = new System.Drawing.Point(12, 392);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(474, 346);
+            this.groupControl1.Size = new System.Drawing.Size(491, 345);
             this.groupControl1.TabIndex = 16;
-            this.groupControl1.Text = "groupControl1";
+            this.groupControl1.Text = "Müşteriler";
             // 
             // gridControl4
             // 
@@ -160,11 +129,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1133, 761);
             this.Controls.Add(this.groupControl1);
-            this.Controls.Add(this.groupControl4);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl3);
             this.Name = "FrmAnaForm";
-            this.Text = "FrmAnaForm";
+            this.Text = "Ana Form";
             this.Load += new System.EventHandler(this.FrmAnaForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
@@ -174,10 +142,6 @@
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridUrunStok)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
-            this.groupControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridSon5Satis)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).EndInit();
@@ -194,9 +158,6 @@
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraGrid.GridControl gridUrunStok;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
-        private DevExpress.XtraEditors.GroupControl groupControl4;
-        private DevExpress.XtraGrid.GridControl gridSon5Satis;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraGrid.GridControl gridControl4;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView4;

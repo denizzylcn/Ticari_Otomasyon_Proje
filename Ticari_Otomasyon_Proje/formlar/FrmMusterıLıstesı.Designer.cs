@@ -74,12 +74,12 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5);
             this.gridControl1.Location = new System.Drawing.Point(-5, 372);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(5);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1450, 408);
+            this.gridControl1.Size = new System.Drawing.Size(1300, 408);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -120,17 +120,16 @@
             this.groupControl1.Controls.Add(this.txtID);
             this.groupControl1.Controls.Add(this.label1);
             this.groupControl1.Location = new System.Drawing.Point(-5, 2);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(5);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1955, 360);
+            this.groupControl1.Size = new System.Drawing.Size(1300, 360);
             this.groupControl1.TabIndex = 1;
-            this.groupControl1.Text = "groupControl1";
             this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // lookUpEditIlce
             // 
-            this.lookUpEditIlce.Location = new System.Drawing.Point(739, 248);
-            this.lookUpEditIlce.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.lookUpEditIlce.Location = new System.Drawing.Point(554, 244);
+            this.lookUpEditIlce.Margin = new System.Windows.Forms.Padding(5);
             this.lookUpEditIlce.Name = "lookUpEditIlce";
             this.lookUpEditIlce.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -143,7 +142,7 @@
             // lookUpEditIl
             // 
             this.lookUpEditIl.Location = new System.Drawing.Point(142, 302);
-            this.lookUpEditIl.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.lookUpEditIl.Margin = new System.Windows.Forms.Padding(5);
             this.lookUpEditIl.Name = "lookUpEditIl";
             this.lookUpEditIl.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -157,10 +156,10 @@
             // btnAra
             // 
             this.btnAra.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAra.ImageOptions.Image")));
-            this.btnAra.Location = new System.Drawing.Point(1356, 145);
-            this.btnAra.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnAra.Location = new System.Drawing.Point(1055, 150);
+            this.btnAra.Margin = new System.Windows.Forms.Padding(5);
             this.btnAra.Name = "btnAra";
-            this.btnAra.Size = new System.Drawing.Size(300, 45);
+            this.btnAra.Size = new System.Drawing.Size(190, 45);
             this.btnAra.TabIndex = 28;
             this.btnAra.Text = "Ara";
             this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
@@ -168,10 +167,10 @@
             // btniptal
             // 
             this.btniptal.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btniptal.ImageOptions.Image")));
-            this.btniptal.Location = new System.Drawing.Point(1356, 209);
-            this.btniptal.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btniptal.Location = new System.Drawing.Point(1055, 214);
+            this.btniptal.Margin = new System.Windows.Forms.Padding(5);
             this.btniptal.Name = "btniptal";
-            this.btniptal.Size = new System.Drawing.Size(300, 45);
+            this.btniptal.Size = new System.Drawing.Size(190, 45);
             this.btniptal.TabIndex = 27;
             this.btniptal.Text = "İptal";
             this.btniptal.Click += new System.EventHandler(this.btniptal_Click);
@@ -179,10 +178,10 @@
             // btnYeniFormdaMusterıLıstesı
             // 
             this.btnYeniFormdaMusterıLıstesı.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnYeniFormdaMusterıLıstesı.ImageOptions.Image")));
-            this.btnYeniFormdaMusterıLıstesı.Location = new System.Drawing.Point(1356, 70);
-            this.btnYeniFormdaMusterıLıstesı.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnYeniFormdaMusterıLıstesı.Location = new System.Drawing.Point(1055, 75);
+            this.btnYeniFormdaMusterıLıstesı.Margin = new System.Windows.Forms.Padding(5);
             this.btnYeniFormdaMusterıLıstesı.Name = "btnYeniFormdaMusterıLıstesı";
-            this.btnYeniFormdaMusterıLıstesı.Size = new System.Drawing.Size(300, 45);
+            this.btnYeniFormdaMusterıLıstesı.Size = new System.Drawing.Size(190, 45);
             this.btnYeniFormdaMusterıLıstesı.TabIndex = 25;
             this.btnYeniFormdaMusterıLıstesı.Text = "Yeni Sayfada Müşteri Listesi";
             this.btnYeniFormdaMusterıLıstesı.Click += new System.EventHandler(this.btnYeniFormdaMusterıLıstesı_Click);
@@ -190,8 +189,8 @@
             // btnSil
             // 
             this.btnSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSil.ImageOptions.Image")));
-            this.btnSil.Location = new System.Drawing.Point(1094, 145);
-            this.btnSil.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSil.Location = new System.Drawing.Point(817, 150);
+            this.btnSil.Margin = new System.Windows.Forms.Padding(5);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(208, 45);
             this.btnSil.TabIndex = 24;
@@ -201,8 +200,8 @@
             // btnGuncelle
             // 
             this.btnGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGuncelle.ImageOptions.Image")));
-            this.btnGuncelle.Location = new System.Drawing.Point(1094, 274);
-            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnGuncelle.Location = new System.Drawing.Point(817, 279);
+            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(5);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(208, 45);
             this.btnGuncelle.TabIndex = 23;
@@ -212,8 +211,8 @@
             // btnEkle
             // 
             this.btnEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEkle.ImageOptions.Image")));
-            this.btnEkle.Location = new System.Drawing.Point(1094, 209);
-            this.btnEkle.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnEkle.Location = new System.Drawing.Point(817, 214);
+            this.btnEkle.Margin = new System.Windows.Forms.Padding(5);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(208, 45);
             this.btnEkle.TabIndex = 22;
@@ -223,8 +222,8 @@
             // btnListele
             // 
             this.btnListele.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnListele.ImageOptions.Image")));
-            this.btnListele.Location = new System.Drawing.Point(1094, 70);
-            this.btnListele.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnListele.Location = new System.Drawing.Point(817, 75);
+            this.btnListele.Margin = new System.Windows.Forms.Padding(5);
             this.btnListele.Name = "btnListele";
             this.btnListele.Size = new System.Drawing.Size(208, 45);
             this.btnListele.TabIndex = 21;
@@ -233,8 +232,8 @@
             // 
             // txtMail
             // 
-            this.txtMail.Location = new System.Drawing.Point(739, 51);
-            this.txtMail.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMail.Location = new System.Drawing.Point(554, 47);
+            this.txtMail.Margin = new System.Windows.Forms.Padding(5);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(195, 22);
             this.txtMail.TabIndex = 19;
@@ -242,7 +241,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(598, 61);
+            this.label10.Location = new System.Drawing.Point(413, 57);
             this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(35, 16);
@@ -251,8 +250,8 @@
             // 
             // txtTC
             // 
-            this.txtTC.Location = new System.Drawing.Point(739, 119);
-            this.txtTC.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtTC.Location = new System.Drawing.Point(554, 115);
+            this.txtTC.Margin = new System.Windows.Forms.Padding(5);
             this.txtTC.Name = "txtTC";
             this.txtTC.Size = new System.Drawing.Size(195, 22);
             this.txtTC.TabIndex = 17;
@@ -260,7 +259,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(598, 124);
+            this.label9.Location = new System.Drawing.Point(413, 120);
             this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(28, 16);
@@ -269,8 +268,8 @@
             // 
             // txtAdres
             // 
-            this.txtAdres.Location = new System.Drawing.Point(739, 182);
-            this.txtAdres.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtAdres.Location = new System.Drawing.Point(554, 178);
+            this.txtAdres.Margin = new System.Windows.Forms.Padding(5);
             this.txtAdres.Name = "txtAdres";
             this.txtAdres.Size = new System.Drawing.Size(195, 22);
             this.txtAdres.TabIndex = 15;
@@ -278,7 +277,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(598, 188);
+            this.label8.Location = new System.Drawing.Point(413, 184);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 16);
@@ -288,7 +287,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(598, 251);
+            this.label6.Location = new System.Drawing.Point(413, 247);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 16);
@@ -308,7 +307,7 @@
             // txtTelefon
             // 
             this.txtTelefon.Location = new System.Drawing.Point(142, 242);
-            this.txtTelefon.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtTelefon.Margin = new System.Windows.Forms.Padding(5);
             this.txtTelefon.Name = "txtTelefon";
             this.txtTelefon.Size = new System.Drawing.Size(195, 22);
             this.txtTelefon.TabIndex = 7;
@@ -326,7 +325,7 @@
             // txtSoyad
             // 
             this.txtSoyad.Location = new System.Drawing.Point(142, 178);
-            this.txtSoyad.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtSoyad.Margin = new System.Windows.Forms.Padding(5);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(195, 22);
             this.txtSoyad.TabIndex = 5;
@@ -344,7 +343,7 @@
             // txtAd
             // 
             this.txtAd.Location = new System.Drawing.Point(142, 119);
-            this.txtAd.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtAd.Margin = new System.Windows.Forms.Padding(5);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(195, 22);
             this.txtAd.TabIndex = 3;
@@ -362,7 +361,7 @@
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(142, 56);
-            this.txtID.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtID.Margin = new System.Windows.Forms.Padding(5);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(195, 22);
             this.txtID.TabIndex = 1;
@@ -381,7 +380,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1445, 674);
+            this.ClientSize = new System.Drawing.Size(1782, 800);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmMusterıLıstesı";

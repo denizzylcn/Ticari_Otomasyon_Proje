@@ -84,7 +84,6 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(361, 479);
             this.groupControl1.TabIndex = 6;
-            this.groupControl1.Text = "groupControl1";
             // 
             // labelControl6
             // 

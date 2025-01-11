@@ -1,4 +1,6 @@
-﻿namespace Ticari_Otomasyon_Proje.formlar
+﻿using System;
+
+namespace Ticari_Otomasyon_Proje.formlar
 {
     partial class FrmUrunEkle
     {
@@ -70,6 +72,7 @@
             this.txtUrunAd.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtUrunAd.Size = new System.Drawing.Size(178, 28);
             this.txtUrunAd.TabIndex = 1;
+            this.txtUrunAd.Enter += new System.EventHandler(this.txtUrunAd_Enter);
             // 
             // txtStok
             // 
@@ -191,5 +194,6 @@
         private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
         private DevExpress.XtraEditors.SimpleButton BtnKaydet;
         private DevExpress.XtraEditors.SimpleButton BtnVazgec;
+        private EventHandler txtUrunAd_Enter;
     }
 }

@@ -36,10 +36,10 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6);
             this.gridControl1.Location = new System.Drawing.Point(-2, 18);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(6);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(1021, 575);
             this.gridControl1.TabIndex = 0;
@@ -57,7 +57,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1002, 579);
+            this.ClientSize = new System.Drawing.Size(1030, 597);
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmKasaListesi";
             this.Text = "Kasa Listesi";

@@ -20,7 +20,7 @@ namespace Ticari_Otomasyon_Proje.formlar
         DbTicariOtomasyonEntities4 db = new DbTicariOtomasyonEntities4();
         private void FrmNotlar_Load(object sender, EventArgs e)
         {
-            gridControl1.DataSource = db.TBLNOTLAR.ToList();
+            Notlar.DataSource = db.TBLNOTLAR.ToList();
         }
     }
 }

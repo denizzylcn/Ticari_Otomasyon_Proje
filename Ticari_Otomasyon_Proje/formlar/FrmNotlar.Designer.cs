@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.Notlar = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Notlar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // gridControl1
+            // Notlar
             // 
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.gridControl1.Location = new System.Drawing.Point(23, 14);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(728, 404);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.Notlar.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5);
+            this.Notlar.Location = new System.Drawing.Point(23, 14);
+            this.Notlar.MainView = this.gridView1;
+            this.Notlar.Margin = new System.Windows.Forms.Padding(5);
+            this.Notlar.Name = "Notlar";
+            this.Notlar.Size = new System.Drawing.Size(728, 404);
+            this.Notlar.TabIndex = 0;
+            this.Notlar.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
             this.gridView1.DetailHeight = 437;
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.Notlar;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsEditForm.PopupEditFormWidth = 1000;
             // 
@@ -58,11 +58,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.Notlar);
             this.Name = "FrmNotlar";
             this.Text = "Notlar";
             this.Load += new System.EventHandler(this.FrmNotlar_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Notlar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -70,7 +70,7 @@
 
         #endregion
 
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl Notlar;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }

@@ -27,6 +27,10 @@ namespace Ticari_Otomasyon_Proje.formlar
             {
                 chartControl2.Series["Departmanlar"].Points.AddPoint(x.Ad, short.Parse(x.TOPLAM.ToString()));
             }
+            foreach (var x in degerler)
+            {
+                chartControl1.Series["Departmanlar"].Points.AddPoint(x.Ad, short.Parse(x.TOPLAM.ToString()));
+            }
             db.TBLDEPARTMAN.Load();
             bindingSource1.DataSource = db.TBLDEPARTMAN.Local;
         }
@@ -40,6 +44,11 @@ namespace Ticari_Otomasyon_Proje.formlar
         {
             bindingSource1.RemoveCurrent();
             db.SaveChanges();
+        }
+
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

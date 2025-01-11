@@ -62,7 +62,7 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(371, 298);
             this.groupControl1.TabIndex = 5;
-            this.groupControl1.Text = "groupControl1";
+            this.groupControl1.Text = "Kategoriler";
             // 
             // BtnEkle
             // 
@@ -169,7 +169,7 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmKategoriler1";
-            this.Text = "FrmKategoriler1";
+            this.Text = "Kategoriler";
             this.Load += new System.EventHandler(this.FrmKategoriler1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);

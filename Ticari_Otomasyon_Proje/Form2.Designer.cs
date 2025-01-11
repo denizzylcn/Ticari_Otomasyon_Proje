@@ -2,6 +2,7 @@
 {
     partial class Form2
     {
+        
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -13,6 +14,7 @@
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
+            InitializeComponent();
             if (disposing && components != null)
             {
                 components.Dispose();
@@ -67,6 +69,7 @@
             this.btnYeniNot = new DevExpress.XtraBars.BarButtonItem();
             this.BtnAnaForm = new DevExpress.XtraBars.BarButtonItem();
             this.btnQr = new DevExpress.XtraBars.BarButtonItem();
+            this.btnYoutube = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -87,6 +90,8 @@
             this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.webBrowser2 = new System.Windows.Forms.WebBrowser();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,10 +132,11 @@
             this.barButtonItem22,
             this.btnYeniNot,
             this.BtnAnaForm,
-            this.btnQr});
+            this.btnQr,
+            this.btnYoutube});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(15);
-            this.ribbonControl1.MaxItemId = 41;
+            this.ribbonControl1.MaxItemId = 42;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 1571;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -140,7 +146,7 @@
             this.ribbonPage4,
             this.BtnPersoneller,
             this.ribbonPage6});
-            this.ribbonControl1.Size = new System.Drawing.Size(1122, 183);
+            this.ribbonControl1.Size = new System.Drawing.Size(1782, 183);
             // 
             // BtnKategoriListesi
             // 
@@ -224,7 +230,6 @@
             this.btnUrunRaporları.Id = 13;
             this.btnUrunRaporları.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnUrunRaporları.ImageOptions.LargeImage")));
             this.btnUrunRaporları.Name = "btnUrunRaporları";
-            this.btnUrunRaporları.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUrunRaporları_ItemClick);
             // 
             // btnKasaListesi
             // 
@@ -378,6 +383,7 @@
             this.BtnAnaForm.Id = 38;
             this.BtnAnaForm.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnAnaForm.ImageOptions.LargeImage")));
             this.BtnAnaForm.Name = "BtnAnaForm";
+            this.BtnAnaForm.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnAnaForm_ItemClick);
             // 
             // btnQr
             // 
@@ -386,6 +392,14 @@
             this.btnQr.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnQr.ImageOptions.LargeImage")));
             this.btnQr.Name = "btnQr";
             this.btnQr.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnQr_ItemClick);
+            // 
+            // btnYoutube
+            // 
+            this.btnYoutube.Caption = "Youtube";
+            this.btnYoutube.Id = 41;
+            this.btnYoutube.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnYoutube.ImageOptions.LargeImage")));
+            this.btnYoutube.Name = "btnYoutube";
+            this.btnYoutube.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnYoutube_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -398,7 +412,6 @@
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.BtnAnaForm);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
             // ribbonPage2
             // 
@@ -412,7 +425,6 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.BtnKategoriListesi);
             this.ribbonPageGroup2.ItemLinks.Add(this.BtnYeniKategori);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "ribbonPageGroup2";
             // 
             // ribbonPage3
             // 
@@ -428,20 +440,17 @@
             this.ribbonPageGroup11.ItemLinks.Add(this.BtnUrunListesi);
             this.ribbonPageGroup11.ItemLinks.Add(this.BtnYeniUrun);
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
-            this.ribbonPageGroup11.Text = "ribbonPageGroup11";
             // 
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.BtnKategoriIstatistik, true);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "ribbonPageGroup3";
             // 
             // ribbonPageGroup4
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem6);
             this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem7);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "ribbonPageGroup4";
             // 
             // ribbonPage4
             // 
@@ -457,19 +466,16 @@
             this.ribbonPageGroup13.ItemLinks.Add(this.btnMusterıLıstesi);
             this.ribbonPageGroup13.ItemLinks.Add(this.btnYeniMusterı);
             this.ribbonPageGroup13.Name = "ribbonPageGroup13";
-            this.ribbonPageGroup13.Text = "ribbonPageGroup13";
             // 
             // ribbonPageGroup15
             // 
             this.ribbonPageGroup15.ItemLinks.Add(this.BtnMusterıIstatistik);
             this.ribbonPageGroup15.Name = "ribbonPageGroup15";
-            this.ribbonPageGroup15.Text = "ribbonPageGroup15";
             // 
             // ribbonPageGroup16
             // 
             this.ribbonPageGroup16.ItemLinks.Add(this.btnMusterıHareketlerı);
             this.ribbonPageGroup16.Name = "ribbonPageGroup16";
-            this.ribbonPageGroup16.Text = "ribbonPageGroup16";
             // 
             // BtnPersoneller
             // 
@@ -483,13 +489,11 @@
             // 
             this.ribbonPageGroup5.ItemLinks.Add(this.BtnPersonelLıstesı);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            this.ribbonPageGroup5.Text = "ribbonPageGroup5";
             // 
             // ribbonPageGroup6
             // 
             this.ribbonPageGroup6.ItemLinks.Add(this.btnDepartmanListesi);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
-            this.ribbonPageGroup6.Text = "ribbonPageGroup6";
             // 
             // ribbonPage6
             // 
@@ -506,7 +510,6 @@
             this.ribbonPageGroup8.ItemLinks.Add(this.btnKasaListesi);
             this.ribbonPageGroup8.ItemLinks.Add(this.btnGiderler);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
-            this.ribbonPageGroup8.Text = "ribbonPageGroup8";
             // 
             // ribbonPageGroup9
             // 
@@ -514,26 +517,44 @@
             this.ribbonPageGroup9.ItemLinks.Add(this.btnYeniNot);
             this.ribbonPageGroup9.ItemLinks.Add(this.btnWord);
             this.ribbonPageGroup9.Name = "ribbonPageGroup9";
-            this.ribbonPageGroup9.Text = "ribbonPageGroup9";
             // 
             // ribbonPageGroup10
             // 
             this.ribbonPageGroup10.ItemLinks.Add(this.btnHesapMakinesi);
             this.ribbonPageGroup10.ItemLinks.Add(this.btnYardım);
+            this.ribbonPageGroup10.ItemLinks.Add(this.btnYoutube);
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
-            this.ribbonPageGroup10.Text = "ribbonPageGroup10";
             // 
             // ribbonPageGroup12
             // 
             this.ribbonPageGroup12.ItemLinks.Add(this.btnQr);
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
-            this.ribbonPageGroup12.Text = "ribbonPageGroup12";
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(0, 183);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(1782, 770);
+            this.webBrowser1.TabIndex = 1;
+            // 
+            // webBrowser2
+            // 
+            this.webBrowser2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser2.Location = new System.Drawing.Point(0, 183);
+            this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser2.Name = "webBrowser2";
+            this.webBrowser2.Size = new System.Drawing.Size(1782, 770);
+            this.webBrowser2.TabIndex = 2;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1122, 628);
+            this.ClientSize = new System.Drawing.Size(1782, 953);
+            this.Controls.Add(this.webBrowser2);
+            this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.ribbonControl1);
             this.Name = "Form2";
             this.Text = "Form2";
@@ -599,5 +620,8 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
         private DevExpress.XtraBars.BarButtonItem btnQr;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
+        private DevExpress.XtraBars.BarButtonItem btnYoutube;
+        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.WebBrowser webBrowser2;
     }
 }
