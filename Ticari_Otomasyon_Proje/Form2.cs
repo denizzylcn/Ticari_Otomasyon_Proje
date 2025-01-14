@@ -24,7 +24,6 @@ namespace Ticari_Otomasyon_Proje
         DbTicariOtomasyonEntities4 db = new DbTicariOtomasyonEntities4();
 
         private void Form2_Load(object sender, EventArgs e)
-        {
             // Form yüklendiğinde yapılacak işlemler
         }
 
