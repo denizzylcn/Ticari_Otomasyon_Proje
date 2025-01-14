@@ -1,4 +1,6 @@
-﻿namespace Ticari_Otomasyon_Proje.formlar
+﻿using System;
+
+namespace Ticari_Otomasyon_Proje.formlar
 {
     partial class FrmGider
     {
@@ -171,7 +173,7 @@
             this.btniptal.Size = new System.Drawing.Size(118, 62);
             this.btniptal.TabIndex = 32;
             this.btniptal.Text = "İptal";
-            this.btniptal.Click += new System.EventHandler(this.btniptal_Click);
+            this.btniptal.Click += new System.EventHandler(this.btniptal_Click_1);
             // 
             // FrmGider
             // 
@@ -192,7 +194,6 @@
             this.Name = "FrmGider";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gider";
-            this.Load += new System.EventHandler(this.FrmGider_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtTutar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
@@ -218,5 +219,8 @@
         private DevExpress.XtraEditors.PictureEdit pictureEdit2;
         private DevExpress.XtraEditors.SimpleButton btnEkle;
         private DevExpress.XtraEditors.SimpleButton btniptal;
+        private readonly EventHandler btniptal_Click;
+
+        public EventHandler FrmGider_Load { get; private set; }
     }
 }

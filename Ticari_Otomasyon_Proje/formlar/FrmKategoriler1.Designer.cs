@@ -58,9 +58,9 @@
             this.groupControl1.Controls.Add(this.BtnListele);
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Controls.Add(this.labelControl2);
-            this.groupControl1.Location = new System.Drawing.Point(881, 12);
+            this.groupControl1.Location = new System.Drawing.Point(886, 12);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(371, 298);
+            this.groupControl1.Size = new System.Drawing.Size(371, 353);
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "Kategoriler";
             // 
@@ -69,7 +69,7 @@
             this.BtnEkle.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.BtnEkle.Appearance.Options.UseFont = true;
             this.BtnEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnEkle.ImageOptions.Image")));
-            this.BtnEkle.Location = new System.Drawing.Point(234, 151);
+            this.BtnEkle.Location = new System.Drawing.Point(195, 184);
             this.BtnEkle.Name = "BtnEkle";
             this.BtnEkle.Size = new System.Drawing.Size(132, 41);
             this.BtnEkle.TabIndex = 8;
@@ -95,7 +95,7 @@
             this.BtnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.BtnGuncelle.Appearance.Options.UseFont = true;
             this.BtnGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuncelle.ImageOptions.Image")));
-            this.BtnGuncelle.Location = new System.Drawing.Point(234, 241);
+            this.BtnGuncelle.Location = new System.Drawing.Point(195, 274);
             this.BtnGuncelle.Name = "BtnGuncelle";
             this.BtnGuncelle.Size = new System.Drawing.Size(132, 41);
             this.BtnGuncelle.TabIndex = 5;
@@ -107,7 +107,7 @@
             this.BtnSıl.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.BtnSıl.Appearance.Options.UseFont = true;
             this.BtnSıl.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSıl.ImageOptions.Image")));
-            this.BtnSıl.Location = new System.Drawing.Point(234, 197);
+            this.BtnSıl.Location = new System.Drawing.Point(195, 230);
             this.BtnSıl.Name = "BtnSıl";
             this.BtnSıl.Size = new System.Drawing.Size(132, 41);
             this.BtnSıl.TabIndex = 4;
@@ -119,7 +119,7 @@
             this.BtnListele.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.BtnListele.Appearance.Options.UseFont = true;
             this.BtnListele.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnListele.ImageOptions.Image")));
-            this.BtnListele.Location = new System.Drawing.Point(234, 104);
+            this.BtnListele.Location = new System.Drawing.Point(195, 137);
             this.BtnListele.Name = "BtnListele";
             this.BtnListele.Size = new System.Drawing.Size(132, 41);
             this.BtnListele.TabIndex = 3;
@@ -148,10 +148,10 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(12, 12);
+            this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(849, 298);
+            this.gridControl1.Size = new System.Drawing.Size(868, 653);
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -165,7 +165,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1274, 348);
+            this.ClientSize = new System.Drawing.Size(1282, 653);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmKategoriler1";

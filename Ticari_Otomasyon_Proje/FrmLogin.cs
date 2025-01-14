@@ -35,5 +35,10 @@ namespace Ticari_Otomasyon_Proje
         {
 
         }
+
+        private void btnCıkıs_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

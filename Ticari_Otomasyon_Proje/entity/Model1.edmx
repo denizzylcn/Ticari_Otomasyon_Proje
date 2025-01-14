@@ -34,7 +34,7 @@
           <Key>
             <PropertyRef Name="GIDERID" />
           </Key>
-          <Property Name="GIDERID" Type="int" Nullable="false" />
+          <Property Name="GIDERID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ACIKLAMA" Type="varchar" MaxLength="1000" />
           <Property Name="TARIH" Type="datetime" />
           <Property Name="TUTAR" Type="decimal" Precision="18" Scale="2" />

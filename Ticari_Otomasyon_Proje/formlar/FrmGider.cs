@@ -14,37 +14,55 @@ namespace Ticari_Otomasyon_Proje.formlar
         DbTicariOtomasyonEntities4 db = new DbTicariOtomasyonEntities4();
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            TBLGIDERLER t = new TBLGIDERLER();
-            t.ACIKLAMA = TxtAciklama.Text; // Açıklama text alanından alınır
-            t.TUTAR = decimal.Parse(TxtTutar.Text); // Tutar text alanı decimal'a dönüştürülerek alınır
-            t.TARIH = DateTime.Parse(TxtTarih.Text); // Tarih text alanından alınır ve DateTime olarak dönüştürülür
+            if (string.IsNullOrWhiteSpace(TxtTutar.Text) || !decimal.TryParse(TxtTutar.Text, out decimal tutar))
+            {
+                XtraMessageBox.Show("Lütfen geçerli bir tutar giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            // Yeni gider nesnesini veritabanına ekleme
-            db.TBLGIDERLER.Add(t);
+            if (string.IsNullOrWhiteSpace(TxtTarih.Text) || !DateTime.TryParse(TxtTarih.Text, out DateTime tarih))
+            {
+                XtraMessageBox.Show("Lütfen geçerli bir tarih giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            // Değişiklikleri kaydetme
-            db.SaveChanges();
+            try
+            {
+                // Gider nesnesini oluşturma ve ekleme
+                TBLGIDERLER t = new TBLGIDERLER
+                {
+                    ACIKLAMA = TxtAciklama.Text,
+                    TUTAR = tutar,
+                    TARIH = tarih
+                };
+                db.TBLGIDERLER.Add(t);
+                db.SaveChanges();
 
-            TBLKASA t2 = new TBLKASA();
-            t2.TUTAR = decimal.Parse(TxtTutar.Text);
-            t2.ACIKLAMA = TxtAciklama.Text;
-            t2.TARIH = DateTime.Parse(TxtTarih.Text);
-            t2.TUR = "Çıkış";
-            db.TBLKASA.Add(t2);
-            db.SaveChanges();
+                // Kasa kaydını oluşturma ve ekleme
+                TBLKASA t2 = new TBLKASA
+                {
+                    TUTAR = tutar,
+                    ACIKLAMA = TxtAciklama.Text,
+                    TARIH = tarih,
+                    TUR = "Çıkış"
+                };
+                db.TBLKASA.Add(t2);
+                db.SaveChanges();
 
-            // Başarılı mesajı gösterme
-            XtraMessageBox.Show("Gider sisteme başarılı bir şekilde eklendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show("Gider sisteme başarılı bir şekilde eklendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show($"Hata: {ex.InnerException?.Message ?? ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void btniptal_Click(object sender, EventArgs e)
+        private void btniptal_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void FrmGider_Load(object sender, EventArgs e)
-        {
-
-        }
     }
-}
+
+    
+    }
+

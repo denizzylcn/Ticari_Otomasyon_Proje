@@ -34,6 +34,7 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.btnGirisYap = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.btnCıkıs = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtKullanıcıAd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSıfre.Properties)).BeginInit();
             this.SuspendLayout();
@@ -85,7 +86,7 @@
             // 
             this.btnGirisYap.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGirisYap.Appearance.Options.UseFont = true;
-            this.btnGirisYap.Location = new System.Drawing.Point(349, 296);
+            this.btnGirisYap.Location = new System.Drawing.Point(225, 296);
             this.btnGirisYap.Margin = new System.Windows.Forms.Padding(4);
             this.btnGirisYap.Name = "btnGirisYap";
             this.btnGirisYap.Size = new System.Drawing.Size(140, 41);
@@ -104,12 +105,25 @@
             this.labelControl3.TabIndex = 5;
             this.labelControl3.Text = "TİCARİ OTOMASYON";
             // 
+            // btnCıkıs
+            // 
+            this.btnCıkıs.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnCıkıs.Appearance.Options.UseFont = true;
+            this.btnCıkıs.Location = new System.Drawing.Point(399, 296);
+            this.btnCıkıs.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCıkıs.Name = "btnCıkıs";
+            this.btnCıkıs.Size = new System.Drawing.Size(140, 41);
+            this.btnCıkıs.TabIndex = 6;
+            this.btnCıkıs.Text = "Çıkış Yap";
+            this.btnCıkıs.Click += new System.EventHandler(this.btnCıkıs_Click);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCıkıs);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.btnGirisYap);
             this.Controls.Add(this.txtSıfre);
@@ -136,5 +150,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.SimpleButton btnGirisYap;
         private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.SimpleButton btnCıkıs;
     }
 }
