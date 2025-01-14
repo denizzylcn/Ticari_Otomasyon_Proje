@@ -60,6 +60,7 @@
             this.ClientSize = new System.Drawing.Size(1030, 597);
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmKasaListesi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kasa Listesi";
             this.Load += new System.EventHandler(this.FrmKasaListesi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();

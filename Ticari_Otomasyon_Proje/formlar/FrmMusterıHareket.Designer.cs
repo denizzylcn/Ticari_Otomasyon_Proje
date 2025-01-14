@@ -228,6 +228,7 @@
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmMusterıHareket";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Müşteri Hareket";
             this.Load += new System.EventHandler(this.FrmMusterıHareket_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();

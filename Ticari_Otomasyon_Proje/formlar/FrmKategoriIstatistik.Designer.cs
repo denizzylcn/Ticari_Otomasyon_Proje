@@ -73,10 +73,10 @@
             // lblKategoriSayisi1
             // 
             this.lblKategoriSayisi1.Appearance.Font = new System.Drawing.Font("Tahoma", 18F);
-            this.lblKategoriSayisi1.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblKategoriSayisi1.Appearance.ForeColor = System.Drawing.Color.Brown;
             this.lblKategoriSayisi1.Appearance.Options.UseFont = true;
             this.lblKategoriSayisi1.Appearance.Options.UseForeColor = true;
-            this.lblKategoriSayisi1.Location = new System.Drawing.Point(12, 88);
+            this.lblKategoriSayisi1.Location = new System.Drawing.Point(49, 88);
             this.lblKategoriSayisi1.Margin = new System.Windows.Forms.Padding(10);
             this.lblKategoriSayisi1.Name = "lblKategoriSayisi1";
             this.lblKategoriSayisi1.Size = new System.Drawing.Size(174, 36);
@@ -88,12 +88,12 @@
             // 
             this.lblKategoriSayisi.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.lblKategoriSayisi.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.lblKategoriSayisi.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblKategoriSayisi.Appearance.ForeColor = System.Drawing.Color.Brown;
             this.lblKategoriSayisi.Appearance.Options.UseBackColor = true;
             this.lblKategoriSayisi.Appearance.Options.UseFont = true;
             this.lblKategoriSayisi.Appearance.Options.UseForeColor = true;
             this.lblKategoriSayisi.LineColor = System.Drawing.Color.White;
-            this.lblKategoriSayisi.Location = new System.Drawing.Point(68, 36);
+            this.lblKategoriSayisi.Location = new System.Drawing.Point(49, 36);
             this.lblKategoriSayisi.Margin = new System.Windows.Forms.Padding(10);
             this.lblKategoriSayisi.Name = "lblKategoriSayisi";
             this.lblKategoriSayisi.Size = new System.Drawing.Size(109, 21);
@@ -161,10 +161,10 @@
             // lblSonEklenenKategori
             // 
             this.lblSonEklenenKategori.Appearance.Font = new System.Drawing.Font("Tahoma", 18F);
-            this.lblSonEklenenKategori.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblSonEklenenKategori.Appearance.ForeColor = System.Drawing.Color.Brown;
             this.lblSonEklenenKategori.Appearance.Options.UseFont = true;
             this.lblSonEklenenKategori.Appearance.Options.UseForeColor = true;
-            this.lblSonEklenenKategori.Location = new System.Drawing.Point(15, 85);
+            this.lblSonEklenenKategori.Location = new System.Drawing.Point(67, 88);
             this.lblSonEklenenKategori.Margin = new System.Windows.Forms.Padding(12);
             this.lblSonEklenenKategori.Name = "lblSonEklenenKategori";
             this.lblSonEklenenKategori.Size = new System.Drawing.Size(174, 36);
@@ -175,12 +175,12 @@
             // 
             this.labelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Brown;
             this.labelControl2.Appearance.Options.UseBackColor = true;
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
             this.labelControl2.LineColor = System.Drawing.Color.White;
-            this.labelControl2.Location = new System.Drawing.Point(25, 36);
+            this.labelControl2.Location = new System.Drawing.Point(67, 36);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(12);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(162, 21);
@@ -235,6 +235,7 @@
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "FrmKategoriIstatistik";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kategori İstatistik";
             this.Load += new System.EventHandler(this.FrmKategoriIstatistik_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Ticari_Otomasyon_Proje.entity;
 
@@ -23,12 +18,12 @@ namespace Ticari_Otomasyon_Proje.formlar
         {
             db.TBLPERSONEL.Load();
             bindingSource1.DataSource = db.TBLPERSONEL.Local;
-            repositoryItemLookUpEdit4.DataSource=(from x in db.TBLDEPARTMAN
-                                                  select new
-                                                  {
-                                                      x.ID,
-                                                      x.DEPARTMANAD,
-                                                  }).ToList();
+            repositoryItemLookUpEdit4.DataSource = (from x in db.TBLDEPARTMAN
+                                                    select new
+                                                    {
+                                                        x.ID,
+                                                        x.DEPARTMANAD,
+                                                    }).ToList();
         }
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)

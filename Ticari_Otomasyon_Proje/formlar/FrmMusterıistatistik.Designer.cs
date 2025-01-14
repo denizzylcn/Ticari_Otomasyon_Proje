@@ -106,6 +106,7 @@
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.chartControl1);
             this.Name = "FrmMusterıistatistik";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Müşteri İstatistik";
             this.Load += new System.EventHandler(this.FrmMusterıistatistik_Load);
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();

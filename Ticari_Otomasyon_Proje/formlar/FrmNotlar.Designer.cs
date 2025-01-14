@@ -60,6 +60,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Notlar);
             this.Name = "FrmNotlar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Notlar";
             this.Load += new System.EventHandler(this.FrmNotlar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Notlar)).EndInit();

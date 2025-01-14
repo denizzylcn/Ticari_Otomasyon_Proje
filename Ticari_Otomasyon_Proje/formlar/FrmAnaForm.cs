@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Ticari_Otomasyon_Proje.entity;
 
@@ -20,7 +15,7 @@ namespace Ticari_Otomasyon_Proje.formlar
         DbTicariOtomasyonEntities4 db = new DbTicariOtomasyonEntities4();
         private void FrmAnaForm_Load(object sender, EventArgs e)
         {
-            
+
 
 
             DateTime bugun = DateTime.Today;
@@ -42,6 +37,11 @@ namespace Ticari_Otomasyon_Proje.formlar
                                x.TELEFON,
                            }).ToList();
             gridControl4.DataSource = musterı;
+        }
+
+        private void groupControl2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -54,7 +54,7 @@
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl7.Appearance.Options.UseFont = true;
             this.labelControl7.Location = new System.Drawing.Point(130, 136);
-            this.labelControl7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(49, 21);
             this.labelControl7.TabIndex = 26;
@@ -64,7 +64,7 @@
             // 
             this.pictureEdit7.EditValue = ((object)(resources.GetObject("pictureEdit7.EditValue")));
             this.pictureEdit7.Location = new System.Drawing.Point(84, 136);
-            this.pictureEdit7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureEdit7.Margin = new System.Windows.Forms.Padding(6);
             this.pictureEdit7.Name = "pictureEdit7";
             this.pictureEdit7.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit7.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
@@ -77,7 +77,7 @@
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(130, 63);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(51, 21);
             this.labelControl1.TabIndex = 23;
@@ -86,7 +86,7 @@
             // TxtTutar
             // 
             this.TxtTutar.Location = new System.Drawing.Point(251, 60);
-            this.TxtTutar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.TxtTutar.Margin = new System.Windows.Forms.Padding(6);
             this.TxtTutar.Name = "TxtTutar";
             this.TxtTutar.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.TxtTutar.Properties.Appearance.Options.UseFont = true;
@@ -97,7 +97,7 @@
             // 
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
             this.pictureEdit1.Location = new System.Drawing.Point(84, 63);
-            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(6);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
@@ -110,7 +110,7 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(130, 210);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(8);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(83, 21);
             this.labelControl2.TabIndex = 27;
@@ -119,7 +119,7 @@
             // TxtAciklama
             // 
             this.TxtAciklama.Location = new System.Drawing.Point(251, 210);
-            this.TxtAciklama.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.TxtAciklama.Name = "TxtAciklama";
             this.TxtAciklama.Size = new System.Drawing.Size(244, 138);
             this.TxtAciklama.TabIndex = 28;
@@ -128,7 +128,7 @@
             // 
             this.TxtTarih.EditValue = null;
             this.TxtTarih.Location = new System.Drawing.Point(251, 133);
-            this.TxtTarih.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtTarih.Margin = new System.Windows.Forms.Padding(4);
             this.TxtTarih.Name = "TxtTarih";
             this.TxtTarih.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.TxtTarih.Properties.Appearance.Options.UseFont = true;
@@ -143,7 +143,7 @@
             // 
             this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
             this.pictureEdit2.Location = new System.Drawing.Point(84, 210);
-            this.pictureEdit2.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.pictureEdit2.Margin = new System.Windows.Forms.Padding(8);
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
@@ -153,9 +153,9 @@
             // 
             // btnEkle
             // 
-            this.btnEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEkle.ImageOptions.Image")));
             this.btnEkle.Location = new System.Drawing.Point(209, 389);
-            this.btnEkle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEkle.Margin = new System.Windows.Forms.Padding(4);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(117, 62);
             this.btnEkle.TabIndex = 31;
@@ -164,9 +164,9 @@
             // 
             // btniptal
             // 
-            this.btniptal.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btniptal.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btniptal.ImageOptions.Image")));
             this.btniptal.Location = new System.Drawing.Point(377, 389);
-            this.btniptal.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btniptal.Margin = new System.Windows.Forms.Padding(5);
             this.btniptal.Name = "btniptal";
             this.btniptal.Size = new System.Drawing.Size(118, 62);
             this.btniptal.TabIndex = 32;
@@ -190,6 +190,7 @@
             this.Controls.Add(this.TxtTutar);
             this.Controls.Add(this.pictureEdit1);
             this.Name = "FrmGider";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gider";
             this.Load += new System.EventHandler(this.FrmGider_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).EndInit();

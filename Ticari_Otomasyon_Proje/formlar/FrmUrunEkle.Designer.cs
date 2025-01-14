@@ -72,7 +72,7 @@ namespace Ticari_Otomasyon_Proje.formlar
             this.txtUrunAd.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtUrunAd.Size = new System.Drawing.Size(178, 28);
             this.txtUrunAd.TabIndex = 1;
-            this.txtUrunAd.Enter += new System.EventHandler(this.txtUrunAd_Enter);
+            this.txtUrunAd.EditValueChanged += new System.EventHandler(this.txtUrunAd_EditValueChanged);
             // 
             // txtStok
             // 

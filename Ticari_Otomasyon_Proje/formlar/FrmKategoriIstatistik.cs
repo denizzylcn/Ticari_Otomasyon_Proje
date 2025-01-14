@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Ticari_Otomasyon_Proje.entity;
 
@@ -25,7 +20,7 @@ namespace Ticari_Otomasyon_Proje.formlar
         DbTicariOtomasyonEntities4 db = new DbTicariOtomasyonEntities4();
         private void FrmKategoriIstatistik_Load(object sender, EventArgs e)
         {
-           
+
             gridControl1.DataSource = (from x in db.TBLKATEGORI
                                        select new
                                        {
@@ -34,7 +29,7 @@ namespace Ticari_Otomasyon_Proje.formlar
                                        }).ToList();
 
             // "Kategori" serisini oluştur ve Chart Control'e ekle
-            
+
 
             // Diğer işlemler
             lblKategoriSayisi1.Text = db.TBLKATEGORI.Count().ToString();
@@ -57,7 +52,7 @@ namespace Ticari_Otomasyon_Proje.formlar
                 .ToString();
 
             var degerler = db.TBLURUN.ToList();
-            foreach(var x in degerler)
+            foreach (var x in degerler)
             {
                 chartControl1.Series["ürün -stok"].Points.AddPoint(x.URUNAD, short.Parse(x.STOK.ToString()));
             }

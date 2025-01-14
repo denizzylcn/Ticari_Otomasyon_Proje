@@ -421,6 +421,7 @@
             this.Controls.Add(this.txtAd);
             this.Controls.Add(this.pictureEdit1);
             this.Name = "FrmMusterKart";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Müşteri Kart";
             this.Load += new System.EventHandler(this.FrmMusterKart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();

@@ -384,6 +384,7 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmMusterıLıstesı";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMusterıLıstesı";
             this.Load += new System.EventHandler(this.FrmMusterıLıstesı_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();

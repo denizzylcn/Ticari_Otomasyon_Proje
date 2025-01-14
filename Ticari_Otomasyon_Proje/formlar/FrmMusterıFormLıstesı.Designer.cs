@@ -57,6 +57,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmMusterıFormLıstesı";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMusterıFormLıstesı";
             this.Load += new System.EventHandler(this.FrmMusterıFormLıstesı_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();

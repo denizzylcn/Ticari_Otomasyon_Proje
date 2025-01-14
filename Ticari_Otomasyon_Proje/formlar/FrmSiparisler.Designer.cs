@@ -231,6 +231,7 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmSiparisler";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Siparisler";
             this.Load += new System.EventHandler(this.FrmSiparisler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();

@@ -1,12 +1,7 @@
 ﻿using DevExpress.XtraEditors;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Ticari_Otomasyon_Proje.entity;
 
@@ -66,18 +61,18 @@ namespace Ticari_Otomasyon_Proje.formlar
                                                   }).ToList();
         }
 
-        
+
         private void lookUpEditIl_EditValueChanged(object sender, EventArgs e)
         {
             int secilen;
             secilen = int.Parse(lookUpEditIl.EditValue.ToString());
             lookUpEditIlce.Properties.DataSource = (from y in db.TBLILCELER
-                                       select new
-                                       {
-                                           y.id,
-                                           y.ilce,
-                                           y.sehir,
-                                       }).Where(z => z.sehir == secilen).ToList();
+                                                    select new
+                                                    {
+                                                        y.id,
+                                                        y.ilce,
+                                                        y.sehir,
+                                                    }).Where(z => z.sehir == secilen).ToList();
         }
 
         private void groupControl1_Paint(object sender, PaintEventArgs e)
@@ -123,19 +118,19 @@ namespace Ticari_Otomasyon_Proje.formlar
 
         private void btnAra_Click(object sender, EventArgs e)
         {
-            gridControl1.DataSource=(from x in db.TBLMUSTERI
-                                     select new
-                                     {
-                                         x.MUSTERIID,
-                                         x.AD,
-                                         x.SOYAD,
-                                         x.IL,
-                                         x.ILCE,
-                                         x.ADRES,
-                                         x.MAIL,
-                                         x.TC,
-                                         x.TELEFON,
-                                     }).Where(x=>x.AD==txtAd.Text || x.IL==lookUpEditIl.Text).ToList();
+            gridControl1.DataSource = (from x in db.TBLMUSTERI
+                                       select new
+                                       {
+                                           x.MUSTERIID,
+                                           x.AD,
+                                           x.SOYAD,
+                                           x.IL,
+                                           x.ILCE,
+                                           x.ADRES,
+                                           x.MAIL,
+                                           x.TC,
+                                           x.TELEFON,
+                                       }).Where(x => x.AD == txtAd.Text || x.IL == lookUpEditIl.Text).ToList();
         }
 
         private void btniptal_Click(object sender, EventArgs e)

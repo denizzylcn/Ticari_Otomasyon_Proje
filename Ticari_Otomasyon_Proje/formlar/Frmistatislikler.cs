@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Ticari_Otomasyon_Proje.entity;
 
@@ -28,15 +23,15 @@ namespace Ticari_Otomasyon_Proje.formlar
             panelControl2.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
         }
 
-        
+
 
         private void panelControl4_Paint(object sender, PaintEventArgs e)
         {
             panelControl4.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
         }
 
-        
-        
+
+
         private void panelControl6_Paint(object sender, PaintEventArgs e)
         {
             panelControl6.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;

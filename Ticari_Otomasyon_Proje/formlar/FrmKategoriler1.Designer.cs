@@ -169,6 +169,7 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmKategoriler1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kategoriler";
             this.Load += new System.EventHandler(this.FrmKategoriler1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

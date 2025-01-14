@@ -24,6 +24,7 @@
         <AssociationConnector Association="DbTicariOtomasyonModel.FK_TBLMUSTERIHAREKET_TBLPERSONEL" ManuallyRouted="false" />
         <AssociationConnector Association="DbTicariOtomasyonModel.FK_TBLMUSTERIHAREKET_TBLURUN" ManuallyRouted="false" />
         <AssociationConnector Association="DbTicariOtomasyonModel.FK_TBLSIPARISLER_TBLURUN" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DbTicariOtomasyonModel.TBLADMIN" Width="1.5" PointX="7.375" PointY="11.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

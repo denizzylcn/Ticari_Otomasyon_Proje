@@ -40,6 +40,7 @@ namespace Ticari_Otomasyon_Proje.entity
         public virtual DbSet<TBLPERSONEL> TBLPERSONEL { get; set; }
         public virtual DbSet<TBLSIPARISLER> TBLSIPARISLER { get; set; }
         public virtual DbSet<TBLURUN> TBLURUN { get; set; }
+        public virtual DbSet<TBLADMIN> TBLADMIN { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

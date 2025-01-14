@@ -487,6 +487,7 @@
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "Frmistatislikler";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frmistatislikler";
             this.Load += new System.EventHandler(this.Frmistatislikler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl9)).EndInit();

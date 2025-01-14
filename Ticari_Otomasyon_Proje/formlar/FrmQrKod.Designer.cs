@@ -82,6 +82,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureEdit1);
             this.Name = "FrmQrKod";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmQrKod";
             this.Load += new System.EventHandler(this.FrmQrKod_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
