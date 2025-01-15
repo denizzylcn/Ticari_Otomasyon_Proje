@@ -14,10 +14,7 @@ namespace Ticari_Otomasyon_Proje.formlar
             InitializeComponent();
         }
         DbTicariOtomasyonEntities4 db = new DbTicariOtomasyonEntities4();
-        private void FrmUrunler1_Load(object sender, EventArgs e)
-        {
 
-        }
         void urunler()
         {
             gridControl1.DataSource = (from x in db.TBLURUN
@@ -31,6 +28,20 @@ namespace Ticari_Otomasyon_Proje.formlar
                                            x.TBLKATEGORI.KATEGORIAD,
                                        }).ToList();
         }
+        private void FrmUrunler1_Load(object sender, EventArgs e)
+        {
+
+            lookUpEdit1.Properties.DataSource = (from x in db.TBLKATEGORI
+                                                 select new
+                                                 {
+                                                     x.ID,
+                                                     x.KATEGORIAD,
+                                                 }).ToList();
+            // TODO: Bu kod satırı 'dbTicariOtomasyonDataSet2.TBLKATEGORI' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            //this.tBLKATEGORITableAdapter.Fill(this.dbTicariOtomasyonDataSet2.TBLKATEGORI);
+            urunler();
+        }
+        
 
         private void BtnEkle_Click(object sender, EventArgs e)
         {
@@ -40,7 +51,7 @@ namespace Ticari_Otomasyon_Proje.formlar
             t.STOK = short.Parse(txtStok.Text);
             t.ALISFIYAT = decimal.Parse(txtAlisFiyat.Text);
             t.SATISFIYAT = decimal.Parse(txtSatisFiyat.Text);
-            t.KATEGORI = int.Parse(gridLookUpEdit1.EditValue.ToString());
+            t.KATEGORI = int.Parse(lookUpEdit1.EditValue.ToString());
             db.TBLURUN.Add(t);
             db.SaveChanges();
             XtraMessageBox.Show("Ürün ekleme işlemi başarılı bir şekilde gerçekleşti", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -49,16 +60,7 @@ namespace Ticari_Otomasyon_Proje.formlar
 
         private void BtnListele_Click(object sender, EventArgs e)
         {
-            gridControl1.DataSource = (from x in db.TBLURUN
-                                       select new
-                                       {
-                                           x.URUNID,
-                                           x.URUNAD,
-                                           x.STOK,
-                                           x.ALISFIYAT,
-                                           x.SATISFIYAT,
-                                           x.TBLKATEGORI.KATEGORIAD,
-                                       }).ToList();
+            urunler();
         }
 
         private void BtnSıl_Click(object sender, EventArgs e)
@@ -87,7 +89,7 @@ namespace Ticari_Otomasyon_Proje.formlar
             x.ALISFIYAT = decimal.Parse(txtAlisFiyat.Text);
             x.SATISFIYAT = decimal.Parse(txtSatisFiyat.Text);
             x.STOK = short.Parse(txtStok.Text);
-            x.KATEGORI = int.Parse(gridLookUpEdit1.EditValue.ToString());
+            x.KATEGORI = int.Parse(lookUpEdit1.EditValue.ToString());
             db.SaveChanges();
             XtraMessageBox.Show("Verileriniz başarılı bir şekilde güncellendi", "Güncelleme Bilgisi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -98,7 +100,7 @@ namespace Ticari_Otomasyon_Proje.formlar
             txtAlisFiyat.Text = gridView1.GetFocusedRowCellValue("ALISFIYAT").ToString();
             txtSatisFiyat.Text = gridView1.GetFocusedRowCellValue("SATISFIYAT").ToString();
             txtStok.Text = gridView1.GetFocusedRowCellValue("STOK").ToString();
-            gridLookUpEdit1.Text = gridView1.GetFocusedRowCellValue("KATEGORIAD").ToString();
+            lookUpEdit1.Text = gridView1.GetFocusedRowCellValue("KATEGORIAD").ToString();
         }
     }
 }

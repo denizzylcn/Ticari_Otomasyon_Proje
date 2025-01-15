@@ -1,5 +1,8 @@
-﻿using System;
+﻿using DevExpress.XtraWaitForm;
+using System;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
+using Application = System.Windows.Forms.Application;
 
 namespace Ticari_Otomasyon_Proje
 {
@@ -13,9 +16,7 @@ namespace Ticari_Otomasyon_Proje
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLogin());
-
-
+            Application.Run(new FormLogin());
         }
     }
-}
+ }

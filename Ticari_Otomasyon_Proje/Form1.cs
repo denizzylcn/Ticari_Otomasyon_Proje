@@ -22,9 +22,7 @@ namespace Ticari_Otomasyon_Proje
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.StartPosition = FormStartPosition.Manual;
-            this.WindowState = FormWindowState.Maximized;
-            this.FormBorderStyle = FormBorderStyle.None;
+           
         }
         formlar.FrmAnaForm frm1;
         private void btnAnaForm_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
